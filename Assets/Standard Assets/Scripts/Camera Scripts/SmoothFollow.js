@@ -26,5 +26,4 @@ private var thisTransform : Transform;
 		{
 			camera.transform.position.y = cameraHeight;
 		}
-	 
 	}
