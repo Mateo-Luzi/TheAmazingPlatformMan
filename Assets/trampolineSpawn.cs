@@ -5,6 +5,7 @@ public class trampolineSpawn : MonoBehaviour {
 
 
 	private int jumpCount;
+	public float trampolineJumpVelocity;
 	public AudioClip trampolineSound;
 
 	// Use this for initialization
@@ -23,7 +24,7 @@ public class trampolineSpawn : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D  col)
 	{
 		if (col.gameObject.tag == "Player") {
-			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x,100);
+			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x,trampolineJumpVelocity);
 			audio.PlayOneShot (trampolineSound);
 
 			if (jumpCount > 0) {
