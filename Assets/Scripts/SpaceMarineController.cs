@@ -3,19 +3,22 @@ using System.Collections;
 
 public class SpaceMarineController : MonoBehaviour {
 
-	public float maxSpeed;
 	public static bool facingRight = true;
 	public static bool grounded = false;
-	public Transform groundCheck;
-	float groundRadius = 0.2f;
-	public LayerMask whatIsGround;
-	public float jumpForce;
-	float move;
+	public static int platformMode = 1;
 
+	public float move;
+	public float maxSpeed;
+	public float jumpVelocity;
+	
+	private float groundRadius = 0.2f;
+	public Transform groundCheck;
+	public LayerMask whatIsGround;
+	
 	public AudioClip jumpSound;
 	public AudioClip switchWeaponSound;
 
-	public static int platformMode = 1;
+
 
 	// Use this for initialization
 	void Start () {
@@ -28,16 +31,17 @@ public class SpaceMarineController : MonoBehaviour {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 		rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
 
-		if (move == 0 && (rigidbody2D.velocity.x != 0)) {
+		// make sure character's x-position isnt moved by anything other than the player himself
+		if (move == 0 && (rigidbody2D.velocity.x != 0)) 
 			rigidbody2D.velocity = new Vector2(0,rigidbody2D.velocity.y);
-		}
+		
 	}
 	// Update is called once per frame
 	void Update(){
 		move = Input.GetAxisRaw("Horizontal");
 
 		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
-			rigidbody2D.velocity = new Vector2(0,60);
+			rigidbody2D.velocity = new Vector2(0,jumpVelocity);
 			audio.PlayOneShot(jumpSound);
 		}
 

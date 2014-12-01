@@ -1,4 +1,4 @@
- var cameraTarget : GameObject;
+var cameraTarget : GameObject;
 var player : GameObject;
 var smoothTime : float = 0.1;
 var cameraFollowX : boolean = true;

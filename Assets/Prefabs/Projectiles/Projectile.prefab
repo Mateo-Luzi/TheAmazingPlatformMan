@@ -8,10 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
   - 96: {fileID: 9600000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Projectile
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b5583b9b824f14a913343c5e22c8d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 69b7610231a4957409a43c9731e10436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 5000000, guid: 10c09ef3ded3b7a41b7faa51f665b310, type: 2}
