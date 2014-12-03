@@ -24,7 +24,7 @@ public class trampolineSpawn : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D  col)
 	{
 		if (col.gameObject.tag == "Player") {
-			Debug.Log (col.gameObject.rigidbody2D.velocity.y);
+			SpaceMarineController.grounded = true;
 			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x, Mathf.Abs(col.gameObject.rigidbody2D.velocity.y) + trampolineJumpVelocity);
 			audio.PlayOneShot (trampolineSound);
 

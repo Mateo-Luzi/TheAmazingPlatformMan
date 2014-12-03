@@ -7,7 +7,7 @@ var cameraFollowHeight : boolean = false;
 var cameraHeight : float = 2.5;
 var velocity : Vector2;
 
-private var smoothTimeX : float = 0.5;
+private var smoothTimeX : float = 0.3;
 private var smoothTimeY : float = 0.3;
 
 
