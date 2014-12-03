@@ -5,6 +5,7 @@ public class Projectile : MonoBehaviour {
 
 	public Rigidbody2D platformPrefab;
 	public Rigidbody2D trampolinePrefab;
+	public Rigidbody2D boosterPrefab;
 
 	private float x;
 	private float rotationZ;
@@ -49,7 +50,10 @@ public class Projectile : MonoBehaviour {
 				case 2:
 					Instantiate(trampolinePrefab, transform.position, Quaternion.identity);	
 					break;
-				}
+				case 3:
+				Instantiate(boosterPrefab, transform.position,  Quaternion.Euler (0, 0, 90));	
+					break;
+			}
 			Destroy(gameObject);		
 		}
 

@@ -18,7 +18,8 @@ public class SpaceMarineController : MonoBehaviour {
 	public AudioClip jumpSound;
 	public AudioClip switchWeaponSound;
 
-
+	public bool canMove = true;
+	public bool canGround = true;
 
 	// Use this for initialization
 	void Start () {
@@ -28,23 +29,40 @@ public class SpaceMarineController : MonoBehaviour {
 
 	void FixedUpdate () {
 
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
-		rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
+
+		if (canMove == true) {
+
+			rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
+		}
 
 		// make sure character's x-position isnt moved by anything other than the player himself
-		if (move == 0 && (rigidbody2D.velocity.x != 0)) 
-			rigidbody2D.velocity = new Vector2(0,rigidbody2D.velocity.y);
-		
+//		if (move == 0 && (rigidbody2D.velocity.x != 0)) 
+//			rigidbody2D.velocity = new Vector2(0,rigidbody2D.velocity.y);
+//		
 	}
 	// Update is called once per frame
 	void Update(){
-		move = Input.GetAxisRaw("Horizontal");
+
+		if(canGround)
+			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+		
+		if (grounded)
+			canMove = true;
+
+
+
+		if(canMove)
+			move = Input.GetAxisRaw("Horizontal");
 
 		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
 			rigidbody2D.velocity = new Vector2(0,jumpVelocity);
 			audio.PlayOneShot(jumpSound);
 		}
 
+		if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			platformMode = 3;
+			audio.PlayOneShot (switchWeaponSound);
+		}
 		if (Input.GetKeyDown (KeyCode.Alpha2)) {
 			platformMode = 2;
 			audio.PlayOneShot (switchWeaponSound);

@@ -1,29 +1,54 @@
 var cameraTarget : GameObject;
 var player : GameObject;
-var smoothTime : float = 0.1;
+
 var cameraFollowX : boolean = true;
 var cameraFollowY : boolean = true;
 var cameraFollowHeight : boolean = false;
 var cameraHeight : float = 2.5;
 var velocity : Vector2;
+var lastDirection : float;
+
+private var smoothTimeX : float = 0.5;
+private var smoothTimeY : float = 0.3;
+
 
 private var thisTransform : Transform;
 	function Start ()
 	{
 		thisTransform = transform;
+		lastDirection = 0.0f;
+		startTime = Time.time;
 	}
 	function FixedUpdate ()
 	{
-	 
 		if (cameraFollowX){
-			thisTransform.position.x = Mathf.SmoothDamp (thisTransform.position.x, cameraTarget.transform.position.x, velocity.x, smoothTime);
+
+			thisTransform.position.x = Mathf.SmoothDamp (thisTransform.position.x , cameraTarget.transform.position.x, velocity.x, smoothTimeX);
 		}
 		 
 		if (cameraFollowY){
-			thisTransform.position.y = Mathf.SmoothDamp (thisTransform.position.y, cameraTarget.transform.position.y, velocity.y, smoothTime);
+			smoothTimeY = (velocity.y)/100;		
+			thisTransform.position.y = Mathf.SmoothDamp (thisTransform.position.y , cameraTarget.transform.position.y , velocity.y, smoothTimeY);
 		}
 		if (!cameraFollowX & cameraFollowHeight)
 		{
+			
 			camera.transform.position.y = cameraHeight;
 		}
+	}
+	
+	
+	
+	function Update(){
+		
+		if (cameraFollowX){
+//			smoothTimeX = 1.0f / (Mathf.Abs(velocity.x) +10);		
+//			Debug.Log(smoothTimeX);
+		}
+		
+				
+		if (cameraFollowY){
+																																																																																																																																																							
+		}
+
 	}

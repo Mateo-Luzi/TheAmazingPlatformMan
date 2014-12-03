@@ -140,6 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 5000000, guid: 10c09ef3ded3b7a41b7faa51f665b310, type: 2}
   trampolinePrefab: {fileID: 5000000, guid: 79a1df61d10e8b64ea3c4e378d9e8d94, type: 2}
+  boosterPrefab: {fileID: 5000000, guid: 24cb8f4d510b79749b91a57a2ba72837, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
