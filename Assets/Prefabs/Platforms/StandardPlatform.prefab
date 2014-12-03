@@ -11,6 +11,7 @@ GameObject:
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400000}
   - 61: {fileID: 6100000}
+  - 61: {fileID: 6100002}
   m_Layer: 0
   m_Name: StandardPlatform
   m_TagString: StandardPlatform
@@ -82,9 +83,20 @@ BoxCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 31a072cd94ae47f47a3fb9d7e30c016c, type: 2}
+  m_IsTrigger: 1
+  m_Size: {x: 4.71999979, y: .219999999}
+  m_Center: {x: .00999999978, y: .239999995}
+--- !u!61 &6100002
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 5.1002717, y: .509537041}
-  m_Center: {x: -.0294277668, y: .00980949402}
+  m_Size: {x: 4.98999977, y: .389999986}
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1

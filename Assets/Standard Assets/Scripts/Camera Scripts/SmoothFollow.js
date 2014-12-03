@@ -6,7 +6,6 @@ var cameraFollowY : boolean = true;
 var cameraFollowHeight : boolean = false;
 var cameraHeight : float = 2.5;
 var velocity : Vector2;
-var lastDirection : float;
 
 private var smoothTimeX : float = 0.5;
 private var smoothTimeY : float = 0.3;
@@ -16,8 +15,7 @@ private var thisTransform : Transform;
 	function Start ()
 	{
 		thisTransform = transform;
-		lastDirection = 0.0f;
-		startTime = Time.time;
+
 	}
 	function FixedUpdate ()
 	{
@@ -40,15 +38,15 @@ private var thisTransform : Transform;
 	
 	
 	function Update(){
-		
-		if (cameraFollowX){
-//			smoothTimeX = 1.0f / (Mathf.Abs(velocity.x) +10);		
+//		
+//		if (cameraFollowX){
+//			smoothTimeX = 1.0f / (Mathf.Abs(velocity.x) + 2 );		
 //			Debug.Log(smoothTimeX);
-		}
-		
-				
-		if (cameraFollowY){
-																																																																																																																																																							
-		}
+//		}
+//		
+//				
+//		if (cameraFollowY){
+//																																																																																																																																																							
+//		}
 
 	}
