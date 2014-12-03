@@ -40,7 +40,7 @@ public class Projectile : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		transform.position = Vector3.MoveTowards (transform.position, finalDestination,1.5f);
+		transform.position = Vector3.MoveTowards (transform.position, finalDestination,2.5f);
 
 		if (finalDestination == transform.position) {
 			switch(platformMode){

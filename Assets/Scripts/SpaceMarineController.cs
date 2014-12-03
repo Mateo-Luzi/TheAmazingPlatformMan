@@ -49,8 +49,6 @@ public class SpaceMarineController : MonoBehaviour {
 		if (grounded)
 			canMove = true;
 
-
-
 		if(canMove)
 			move = Input.GetAxisRaw("Horizontal");
 

@@ -24,7 +24,8 @@ public class trampolineSpawn : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D  col)
 	{
 		if (col.gameObject.tag == "Player") {
-			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x,trampolineJumpVelocity);
+			Debug.Log (col.gameObject.rigidbody2D.velocity.y);
+			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x, Mathf.Abs(col.gameObject.rigidbody2D.velocity.y) + trampolineJumpVelocity);
 			audio.PlayOneShot (trampolineSound);
 
 			if (jumpCount > 0) {
