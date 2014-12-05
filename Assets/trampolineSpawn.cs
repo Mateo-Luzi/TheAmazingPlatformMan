@@ -12,6 +12,7 @@ public class trampolineSpawn : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Character").GetComponent<SpaceMarineController> ();
+		player.trampolineAmmo--;
 		jumpCount = 2;
 		Destroy (gameObject, 10.0f);
 	}

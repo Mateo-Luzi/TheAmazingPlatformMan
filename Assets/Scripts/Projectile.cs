@@ -67,5 +67,9 @@ public class Projectile : MonoBehaviour {
 		if (col.gameObject.tag != "Projectile" && col.gameObject.tag != "Player")
 			Destroy(gameObject);	
 	}
+	void OnTriggerEnter2D(Collider2D  col){
+		if (col.gameObject.tag != "Projectile" && col.gameObject.tag != "Player")
+			Destroy(gameObject);	
+	}
 
 }

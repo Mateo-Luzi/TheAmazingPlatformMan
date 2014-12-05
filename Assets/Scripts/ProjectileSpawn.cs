@@ -28,12 +28,10 @@ public class ProjectileSpawn : MonoBehaviour {
 			}
 			else if(player.platformMode == 2 && player.trampolineAmmo > 0){
 				Instantiate(projectilePrefab, transform.position, transform.rotation);
-				player.trampolineAmmo--;
 				audio.PlayOneShot (projectileShotSound);
 			}
 			else if(player.platformMode == 3 && player.boosterAmmo > 0){
 				Instantiate(projectilePrefab, transform.position, transform.rotation);
-				player.boosterAmmo--;
 				audio.PlayOneShot (projectileShotSound);
 			}else
 				audio.PlayOneShot (outOfAmmoSound);

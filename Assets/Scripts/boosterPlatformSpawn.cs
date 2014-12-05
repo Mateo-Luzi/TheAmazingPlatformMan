@@ -12,6 +12,7 @@ public class boosterPlatformSpawn : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Character").GetComponent<SpaceMarineController> ();
+		player.boosterAmmo--;
 		Destroy (gameObject, 10.0f);
 	}
 	
