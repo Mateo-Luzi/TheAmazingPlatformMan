@@ -4,12 +4,14 @@ using System.Collections;
 public class boosterPlatformSpawn : MonoBehaviour {
 	
 	private bool canCollide = true;
+	private SpaceMarineController player;
 	public float trampolineJumpVelocity;
 	public AudioClip trampolineSound;
-	
+
+
 	// Use this for initialization
 	void Start () {
-
+		player = GameObject.Find ("Character").GetComponent<SpaceMarineController> ();
 		Destroy (gameObject, 10.0f);
 	}
 	
@@ -44,22 +46,22 @@ public class boosterPlatformSpawn : MonoBehaviour {
 
 
 		// make sure player cannot move character
-		col.gameObject.GetComponent<SpaceMarineController>().canMove = false;
+		player.canMove = false;
 
 
-		col.gameObject.GetComponent<SpaceMarineController> ().canGround = false;
-		SpaceMarineController.grounded = false;
-		col.gameObject.GetComponent<SpaceMarineController> ().move = 0;
+		player.canGround = false;
+		player.grounded = false;
+		player.move = 0;
 		col.gameObject.rigidbody2D.velocity = new Vector2(0,0);
 
 
-		if(SpaceMarineController.facingRight)
+		if(player.facingRight)
 			col.gameObject.rigidbody2D.velocity = new Vector2(150.0f,50.0f);
 		else
 			col.gameObject.rigidbody2D.velocity = new Vector2(-150.0f,50.0f);
 		canCollide = false;
 
-		col.gameObject.GetComponent<SpaceMarineController> ().canGround = true;
+		player.canGround = true;
 		Destroy (gameObject,1.0f);
 		audio.PlayOneShot (trampolineSound);
 

@@ -5,11 +5,13 @@ public class trampolineSpawn : MonoBehaviour {
 
 
 	private int jumpCount;
+	private SpaceMarineController player;
 	public float trampolineJumpVelocity;
 	public AudioClip trampolineSound;
 
 	// Use this for initialization
 	void Start () {
+		player = GameObject.Find ("Character").GetComponent<SpaceMarineController> ();
 		jumpCount = 2;
 		Destroy (gameObject, 10.0f);
 	}
@@ -24,7 +26,7 @@ public class trampolineSpawn : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D  col)
 	{
 		if (col.gameObject.tag == "Player") {
-			SpaceMarineController.grounded = true;
+			player.grounded = true;
 			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x, Mathf.Abs(col.gameObject.rigidbody2D.velocity.y) + trampolineJumpVelocity);
 			audio.PlayOneShot (trampolineSound);
 

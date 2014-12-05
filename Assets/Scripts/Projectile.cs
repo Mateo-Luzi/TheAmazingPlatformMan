@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Projectile : MonoBehaviour {
 
+	private SpaceMarineController player;
+
 	public Rigidbody2D platformPrefab;
 	public Rigidbody2D trampolinePrefab;
 	public Rigidbody2D boosterPrefab;
@@ -17,9 +19,10 @@ public class Projectile : MonoBehaviour {
 
 
 	void Start () {
+		player = GameObject.Find ("Character").GetComponent<SpaceMarineController> ();
 
 		// determine which platform this projectile is suppsed to spawn
-		platformMode = SpaceMarineController.platformMode;
+		platformMode = player.platformMode;
 
 		// make the projectile rotate to the cursor
 		x = transform.localScale.x;
