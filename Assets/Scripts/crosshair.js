@@ -1,7 +1,7 @@
 ﻿#pragma strict
-var cursor : Texture2D;
+public var cursor : Texture2D;
 function Start () {
-
+	
 }
 
 function OnGUI(){
