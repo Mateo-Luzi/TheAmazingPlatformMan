@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f29ae0ac830584f866049c2044f475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor: {fileID: 0}
+  cursor: {fileID: 2800000, guid: b4b1bd196573cdc4489c0a574c4a35e4, type: 3}
 --- !u!4 &159689562
 Transform:
   m_ObjectHideFlags: 0
@@ -1147,7 +1147,6 @@ GameObject:
   - 114: {fileID: 1303132370}
   - 114: {fileID: 1303132371}
   - 82: {fileID: 1303132372}
-  - 114: {fileID: 1303132373}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1309,18 +1308,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &1303132373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1303132364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f29ae0ac830584f866049c2044f475, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: b4b1bd196573cdc4489c0a574c4a35e4, type: 3}
 --- !u!1 &1463532546
 GameObject:
   m_ObjectHideFlags: 0
