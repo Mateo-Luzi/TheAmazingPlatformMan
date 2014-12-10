@@ -28,7 +28,7 @@ private var thisTransform : Transform;
 			smoothTimeY = (velocity.y)/100;		
 			thisTransform.position.y = Mathf.SmoothDamp (thisTransform.position.y , cameraTarget.transform.position.y , velocity.y, smoothTimeY);
 		}
-		if (!cameraFollowX & cameraFollowHeight)
+		if (!cameraFollowX && cameraFollowHeight)
 		{
 			
 			camera.transform.position.y = cameraHeight;
