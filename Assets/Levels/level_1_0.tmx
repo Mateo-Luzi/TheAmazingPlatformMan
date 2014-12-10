@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="200" height="152" tilewidth="96" tileheight="96">
+ <tileset firstgid="1" name="spacestation_wall" tilewidth="96" tileheight="96">
+  <image source="../Tilesets/spacestation_wall.png" width="480" height="288"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object x="48" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="2">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+    <object x="0" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+    <object x="48" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index">
+    <object x="48" y="0" width="48" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="48" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="48" height="48"/>
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index">
+    <object x="48" y="0" width="48" height="48"/>
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <objectgroup draworder="index">
+    <object x="48" y="0" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="12">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="200" height="152">
+  <data encoding="base64" compression="zlib">
+   eJzt3duS0kAABmE8n+X931b2ykBVqOwu6Uwz/Vd9lyo7SasosKcTs68X3xIZavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ESNq9REjavURI2r1ce3zxe9XOG/wmp9vzZcBzmYk1Orj2vf3Hedu6zpdo9a5X6sPB2qd+7X6cKDWuV+rDwdq1nN/7fPorc9968OBmvXcH3kf/zr9b+XPA3/eR856nerD34dh1utUH/VBzHqd6qM+iFmvU334+/hw8fGNtvz/+b0f/2njY7Rep/rw93HkGWz9OqzXaS/UrOdeH3OjZj33+pgbNeu5P0sf542P8XzgYxwRtfqoDyNq9VEfRtTqo+cfRtSs514fc6NmPff6mBs167nXx9yoWc+9PuZGzXru9TE3atZzr4+5UbOe+7P08eO0/lre5euKfx74GEdErT7GOYPbr2mUxzUiatZrUB9zo2a9Bs/Sx/JzWG4/G2L5uRGP9AyfVUqtPhzPzx856zWvj/ogtvx6732O2Mh/zlCrj7n7uPfrj3xvUBv5DOpjn239PLyR7w1qI59BfRy7ke8NaiOfQX0cu5HvDWojn0F9HLuR7w1qI5/BDH0sX18ympFf00KtPrxnMDNq1nujPuZGzXpv1MfcqFnvjfqYGzXrvVEfc6NmvTfqY27UrPdGfcyNmvXeqI+5UbPeG/UxN2rWe6M+5kbNem/Ux9yobX0v2QiW72erj7lR2/peshG212OtDx9q9VEfRtTqoz6M3vM969/6Gv/6iMXLNSOeL+/1nHeP1UeWfRD369bPshhhez3W+vCh+mj1YVQf3OrDpz641YcP1cfWfye7/d4tRz+eWT6nI8f2sfX3zr+go88+4xutj2Qk9ZGsq49kXX0k6+ojWVcfybr6SNbVR7KuPpJ19ZGse7lvie8t1GuPYrR8LxD1/sHEglp/v4oRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ogRtfqIEbX6iBG1+ojRP3r9oJ0=
+  </data>
+ </layer>
+</map>
