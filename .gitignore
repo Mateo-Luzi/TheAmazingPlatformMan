@@ -3,6 +3,8 @@
 # =============== #
 Temp/
 Library/
+*_Data/
+*.exe
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
