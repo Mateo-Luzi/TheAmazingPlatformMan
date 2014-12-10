@@ -105,23 +105,5 @@ public class SpaceMarineController : MonoBehaviour {
 		gameObject.rigidbody2D.gravityScale = 0;
 		gameObject.rigidbody2D.velocity = new Vector2 (0, -50);
 		yield return new WaitForSeconds (1.0f);
-
-		// give player control back
-		canMove = true;
-		grounded = true;
-		canGround = true;
-		gameObject.rigidbody2D.gravityScale = 15;
-		gameObject.rigidbody2D.velocity = new Vector2 (0, 0);
-
-		// respawn player at spawn point and turn on his colliders
-		gameObject.transform.position = spawnPoint.transform.position;
-		foreach (BoxCollider2D b in boxColliderList) 
-			b.isTrigger = false;		
-		foreach (CircleCollider2D c in circleColliderList) 
-			c.isTrigger = false;	
-
-		// refill ammo to default amount
-		trampolineAmmo = 5;
-		boosterAmmo = 5;
 	}
 }
