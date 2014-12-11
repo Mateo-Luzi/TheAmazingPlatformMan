@@ -18,12 +18,15 @@ public class SpaceMarineController : MonoBehaviour {
 	public AudioClip jumpSound;
 	public AudioClip switchWeaponSound;
 	public AudioClip deathSound;
+	public AudioClip pickupSound;
 
 	public bool canMove = true;
 	public bool canGround = true;
 
 	public int trampolineAmmo;
 	public int boosterAmmo;
+
+	public int maxAmmo;
 
 	private GameObject spawnPoint;
 
@@ -105,5 +108,10 @@ public class SpaceMarineController : MonoBehaviour {
 		gameObject.rigidbody2D.gravityScale = 0;
 		gameObject.rigidbody2D.velocity = new Vector2 (0, -50);
 		yield return new WaitForSeconds (1.0f);
+	}
+
+	public void PlayPickupSound()
+	{
+		audio.PlayOneShot (pickupSound);
 	}
 }
