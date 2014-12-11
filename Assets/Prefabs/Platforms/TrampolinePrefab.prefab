@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b1958153fdb1494296897eda2cbf94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trampolineJumpVelocity: 100
+  trampolineJumpVelocity: 80
   trampolineSound: {fileID: 8300000, guid: 2d7165aa039aba54291a7473228006aa, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:

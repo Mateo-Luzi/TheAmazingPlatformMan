@@ -28,7 +28,7 @@ public class trampolineSpawn : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Player") {
 			player.grounded = true;
-			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x, Mathf.Abs(col.gameObject.rigidbody2D.velocity.y) + trampolineJumpVelocity);
+			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x, (0.75f * Mathf.Abs(col.gameObject.rigidbody2D.velocity.y)) + trampolineJumpVelocity);
 			audio.PlayOneShot (trampolineSound);
 
 			if (jumpCount > 0) {

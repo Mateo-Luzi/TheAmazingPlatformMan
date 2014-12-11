@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trampolineJumpVelocity: 1000
-  trampolineSound: {fileID: 8300000, guid: 35aecd131faf8a746b9f4f81f9495ee7, type: 3}
+  boosterSound: {fileID: 8300000, guid: 35aecd131faf8a746b9f4f81f9495ee7, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
