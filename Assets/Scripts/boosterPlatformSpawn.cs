@@ -6,7 +6,7 @@ public class boosterPlatformSpawn : MonoBehaviour {
 	private bool canCollide = true;
 	private SpaceMarineController player;
 	public float trampolineJumpVelocity;
-	public AudioClip trampolineSound;
+	public AudioClip boosterSound;
 
 
 	// Use this for initialization
@@ -29,8 +29,10 @@ public class boosterPlatformSpawn : MonoBehaviour {
 			StartCoroutine(boostPlayer(col));
 		}
 		
-		if (col.gameObject.tag == "Ground")
-			Destroy(gameObject);	
+		if (col.gameObject.tag == "Ground") {
+			player.boosterAmmo++;
+			Destroy (gameObject);	
+		}
 	}
 	
 	void OnCollisionEnter2D(Collision2D  col)
@@ -48,8 +50,6 @@ public class boosterPlatformSpawn : MonoBehaviour {
 
 		// make sure player cannot move character
 		player.canMove = false;
-
-
 		player.canGround = false;
 		player.grounded = false;
 		player.move = 0;
@@ -64,7 +64,7 @@ public class boosterPlatformSpawn : MonoBehaviour {
 
 		player.canGround = true;
 		Destroy (gameObject,1.0f);
-		audio.PlayOneShot (trampolineSound);
+		audio.PlayOneShot (boosterSound);
 
 
 	}

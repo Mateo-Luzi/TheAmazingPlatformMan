@@ -46,7 +46,9 @@ public class trampolineSpawn : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D  col)
 	{
-		if (col.gameObject.tag == "Ground")
-			Destroy(gameObject);
+		if (col.gameObject.tag == "Ground") {
+			player.trampolineAmmo++;
+			Destroy (gameObject);
+		}
 	}
 }
