@@ -29,15 +29,10 @@ public class SpaceMarineController : MonoBehaviour {
 
 	public int maxAmmo;
 
-	private GameObject spawnPoint;
-
 	// Use this for initialization
 	void Start () {
 		trampolineAmmo = 5;
 		boosterAmmo = 5;
-
-		spawnPoint =  GameObject.Find ("PlayerSpawn");
-		gameObject.transform.position = spawnPoint.transform.position;
 	}
 	
 

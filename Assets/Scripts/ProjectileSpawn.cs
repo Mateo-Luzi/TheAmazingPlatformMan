@@ -11,15 +11,20 @@ public class ProjectileSpawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.Find ("Character").GetComponent<SpaceMarineController> ();
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<SpaceMarineController> ();
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-
-
+		if (player == null) {
+			player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();
+			if (player == null)
+				return;
+		}
+		
+		
 		if (Input.GetButtonDown ("Fire1")) {
 
 			if(player.platformMode == 1){

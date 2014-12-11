@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour {
 
 
 	void Start () {
-		player = GameObject.Find ("Character").GetComponent<SpaceMarineController> ();
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<SpaceMarineController> ();
 
 		// determine which platform this projectile is suppsed to spawn
 		platformMode = player.platformMode;
@@ -43,6 +43,12 @@ public class Projectile : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (player == null) {
+			player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();
+			if (player == null)
+				return;
+		}
+		
 		transform.position = Vector3.MoveTowards (transform.position, finalDestination,2.5f);
 
 		if (finalDestination == transform.position) {

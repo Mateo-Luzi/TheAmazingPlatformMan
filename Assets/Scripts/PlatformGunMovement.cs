@@ -12,13 +12,20 @@ public class PlatformGunMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.Find ("Character").GetComponent<SpaceMarineController> ();
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<SpaceMarineController> ();
 		x = transform.localScale.x;
 		ls = transform.localScale;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (player == null) {
+			player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();
+			if (player == null)
+				return;
+		}
+
 		direction = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
 		rotationZ = Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg;
 

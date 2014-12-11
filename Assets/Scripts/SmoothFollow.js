@@ -19,6 +19,14 @@ private var thisTransform : Transform;
 	}
 	function FixedUpdate ()
 	{
+		if (player == null) {
+			player = GameObject.FindGameObjectWithTag("Player");
+			cameraTarget = GameObject.FindGameObjectWithTag("Player");
+			if (player == null)
+				return;
+		}
+	
+	
 		if (cameraFollowX){
 
 			thisTransform.position.x = Mathf.SmoothDamp (thisTransform.position.x , cameraTarget.transform.position.x, velocity.x, smoothTimeX);
@@ -33,20 +41,12 @@ private var thisTransform : Transform;
 			
 			camera.transform.position.y = cameraHeight;
 		}
+		
+		
 	}
 	
 	
 	
 	function Update(){
-//		
-//		if (cameraFollowX){
-//			smoothTimeX = 1.0f / (Mathf.Abs(velocity.x) + 2 );		
-//			Debug.Log(smoothTimeX);
-//		}
-//		
-//				
-//		if (cameraFollowY){
-//																																																																																																																																																							
-//		}
 
 	}
