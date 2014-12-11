@@ -388,7 +388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 461b9c3f51809cf49be107beb78a0493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
 --- !u!61 &259077237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -412,7 +411,7 @@ SpriteRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 073946e94d57ac04fb345d5c28d21992, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -420,7 +419,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1294b3d5f71c53c4e9f82b732d0916f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c533b9226411c184e8a4547873d2ea67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &259077239
 Transform:
@@ -1308,7 +1307,7 @@ SpriteRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 073946e94d57ac04fb345d5c28d21992, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1316,7 +1315,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1294b3d5f71c53c4e9f82b732d0916f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c533b9226411c184e8a4547873d2ea67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1463532549
 Transform:
@@ -1341,7 +1340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 461b9c3f51809cf49be107beb78a0493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: lkjl
 --- !u!1 &1529773924
 GameObject:
   m_ObjectHideFlags: 0

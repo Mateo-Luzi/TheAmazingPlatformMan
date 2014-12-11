@@ -22,6 +22,7 @@ public class SpaceMarineController : MonoBehaviour {
 
 	public bool canMove = true;
 	public bool canGround = true;
+	private bool dying = false;
 
 	public int trampolineAmmo;
 	public int boosterAmmo;
@@ -86,10 +87,13 @@ public class SpaceMarineController : MonoBehaviour {
 	}
 
 	public void Die(){
-		StartCoroutine (killPlayer());
+		if(!dying)
+			StartCoroutine (killPlayer());
 	}
 
 	IEnumerator killPlayer(){
+
+		dying = true;
 
 		audio.PlayOneShot (deathSound);
 
@@ -106,8 +110,15 @@ public class SpaceMarineController : MonoBehaviour {
 		grounded = false;
 		canMove = false;
 		gameObject.rigidbody2D.gravityScale = 0;
-		gameObject.rigidbody2D.velocity = new Vector2 (0, -50);
+
+		// float up
+		gameObject.rigidbody2D.velocity = new Vector2 (0, 10);
+		yield return new WaitForSeconds (0.5f);
+		// fall down
+		gameObject.rigidbody2D.velocity = new Vector2 (0, -35);
 		yield return new WaitForSeconds (1.0f);
+
+		Application.LoadLevel (Application.loadedLevelName);
 	}
 
 	public void PlayPickupSound()
