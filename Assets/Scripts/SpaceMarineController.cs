@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 public class SpaceMarineController : MonoBehaviour {
@@ -45,7 +46,7 @@ public class SpaceMarineController : MonoBehaviour {
 	// Update is called once per frame
 	void Update(){
 
-		timeAlive = Time.time - spawnTime;
+		timeAlive = (float)Math.Round(Time.time - spawnTime, 2);
 		// hacks to get booster platform to work properly
 		if(canGround)
 			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
