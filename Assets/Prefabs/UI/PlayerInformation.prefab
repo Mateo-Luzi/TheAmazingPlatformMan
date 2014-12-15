@@ -46,7 +46,7 @@ GameObject:
   - 114: {fileID: 11400006}
   m_Layer: 5
   m_Name: TrampolinePlatformAmmo
-  m_TagString: TrampolineAmmoDisplay
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,10 +172,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b334af7df54ff44b58c834d823f2c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standard: {fileID: 0}
+  trampoline: {fileID: 0}
+  booster: {fileID: 0}
+  standardColor: {r: 0, g: 0, b: 0, a: 0}
+  trampolineColor: {r: 0, g: 0, b: 0, a: 0}
+  boosterColor: {r: 0, g: 0, b: 0, a: 0}
   trampolineAmmoDisplay: {fileID: 11400006}
   boosterAmmoDisplay: {fileID: 11400010}
   timeDisplay: {fileID: 11400000}
-  timeElapsed: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
