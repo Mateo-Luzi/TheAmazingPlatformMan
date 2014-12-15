@@ -172,9 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b334af7df54ff44b58c834d823f2c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standard: {fileID: 0}
-  trampoline: {fileID: 0}
-  booster: {fileID: 0}
+  standard: {fileID: 11400008}
+  trampoline: {fileID: 11400012}
+  booster: {fileID: 11400014}
   standardColor: {r: 0, g: 0, b: 0, a: 0}
   trampolineColor: {r: 0, g: 0, b: 0, a: 0}
   boosterColor: {r: 0, g: 0, b: 0, a: 0}

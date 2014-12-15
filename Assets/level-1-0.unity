@@ -2285,6 +2285,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b334af7df54ff44b58c834d823f2c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standard: {fileID: 2126144274}
+  trampoline: {fileID: 757301081}
+  booster: {fileID: 1010218394}
+  standardColor: {r: 0, g: 0, b: 0, a: 0}
+  trampolineColor: {r: 0, g: 0, b: 0, a: 0}
+  boosterColor: {r: 0, g: 0, b: 0, a: 0}
   trampolineAmmoDisplay: {fileID: 1499867059}
   boosterAmmoDisplay: {fileID: 1755301636}
   timeDisplay: {fileID: 1942991679}
@@ -3604,7 +3610,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: .600000024
+  m_Volume: .300000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3967,7 +3973,7 @@ GameObject:
   - 114: {fileID: 1499867059}
   m_Layer: 5
   m_Name: TrampolinePlatformAmmo
-  m_TagString: TrampolineAmmoDisplay
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
