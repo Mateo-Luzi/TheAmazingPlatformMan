@@ -19,19 +19,21 @@ public class ammoReload : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 
+		SpaceMarineController player = col.GetComponent<SpaceMarineController>();
+
 		if (col.gameObject.tag == "Player") {
 			if(platformPrefab.tag == "TrampolinePlatform"){
-				col.GetComponent<SpaceMarineController>().trampolineAmmo += reloadAmount;	
-				if(col.GetComponent<SpaceMarineController>().trampolineAmmo > col.GetComponent<SpaceMarineController>().maxAmmo)
-					col.GetComponent<SpaceMarineController>().trampolineAmmo = col.GetComponent<SpaceMarineController>().maxAmmo;
+				player.trampolineAmmo += reloadAmount;	
+				if(player.trampolineAmmo > player.maxAmmo)
+					player.trampolineAmmo = player.maxAmmo;
 			}
 			if(platformPrefab.tag == "BoosterPlatform"){
-				col.GetComponent<SpaceMarineController>().boosterAmmo += reloadAmount;	
-				if(col.GetComponent<SpaceMarineController>().boosterAmmo > col.GetComponent<SpaceMarineController>().maxAmmo)
-					col.GetComponent<SpaceMarineController>().boosterAmmo = col.GetComponent<SpaceMarineController>().maxAmmo;
+				player.boosterAmmo += reloadAmount;	
+				if(player.boosterAmmo > player.maxAmmo)
+					player.boosterAmmo = player.maxAmmo;
 			}
 
-			col.GetComponent<SpaceMarineController>().PlayPickupSound();
+			player.PlayPickupSound();
 			Destroy (gameObject);
 		}
 	}
