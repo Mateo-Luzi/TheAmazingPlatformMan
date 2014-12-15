@@ -57,10 +57,12 @@ public class Projectile : MonoBehaviour {
 					Instantiate(platformPrefab, transform.position, Quaternion.identity);	
 					break;
 				case 2:
-					Instantiate(trampolinePrefab, transform.position, Quaternion.identity);	
+					if(player.trampolineAmmo > 0)
+						Instantiate(trampolinePrefab, transform.position, Quaternion.identity);	
 					break;
 				case 3:
-				Instantiate(boosterPrefab, transform.position,  Quaternion.Euler (0, 0, 90));	
+					if(player.boosterAmmo > 0)
+						Instantiate(boosterPrefab, transform.position,  Quaternion.Euler (0, 0, 90));	
 					break;
 			}
 			Destroy(gameObject);		
