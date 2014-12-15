@@ -8,24 +8,20 @@ public class ingameHud : MonoBehaviour {
 	public Text trampolineAmmoDisplay;
 	public Text boosterAmmoDisplay;
 	public Text timeDisplay;
-	public float timeElapsed;
 
 	// Use this for initialization
 	void Start () {
-		timeElapsed = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		timeElapsed = Time.time;
-		timeDisplay.text = timeElapsed.ToString("F2");
-
 		if (player == null) {
 			player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();
 			if (player == null)
 				return;
 		}
+
+		timeDisplay.text = player.timeAlive.ToString("F2");
 
 		trampolineAmmoDisplay.text = player.trampolineAmmo + "/" + player.maxAmmo;
 		boosterAmmoDisplay.text = player.boosterAmmo + "/" + player.maxAmmo;

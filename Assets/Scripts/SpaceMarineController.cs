@@ -29,10 +29,15 @@ public class SpaceMarineController : MonoBehaviour {
 
 	public int maxAmmo;
 
+	public float timeAlive;
+	public float spawnTime;
+
 	// Use this for initialization
 	void Start () {
+
 		trampolineAmmo = 5;
 		boosterAmmo = 5;
+		spawnTime = Time.time;
 	}
 	
 
@@ -43,6 +48,7 @@ public class SpaceMarineController : MonoBehaviour {
 	// Update is called once per frame
 	void Update(){
 
+		timeAlive = Time.time - spawnTime;
 		// hacks to get booster platform to work properly
 		if(canGround)
 			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
@@ -71,7 +77,6 @@ public class SpaceMarineController : MonoBehaviour {
 			audio.PlayOneShot (switchWeaponSound);
 		}
 
-		
 	}
 
 	public void Flip(){
@@ -120,4 +125,6 @@ public class SpaceMarineController : MonoBehaviour {
 	{
 		audio.PlayOneShot (pickupSound);
 	}
+
+
 }
