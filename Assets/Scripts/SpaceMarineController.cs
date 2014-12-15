@@ -65,12 +65,16 @@ public class SpaceMarineController : MonoBehaviour {
 
 		// platform switch
 		if (Input.GetKeyDown (KeyCode.Alpha3)) {
-			platformMode = 3;
-			audio.PlayOneShot (switchWeaponSound);
+			if(boosterAmmo > 0){
+				platformMode = 3;
+				audio.PlayOneShot (switchWeaponSound);
+			}
 		}
 		if (Input.GetKeyDown (KeyCode.Alpha2)) {
-			platformMode = 2;
-			audio.PlayOneShot (switchWeaponSound);
+			if(trampolineAmmo > 0){
+				platformMode = 2;
+				audio.PlayOneShot (switchWeaponSound);
+			}
 		}
 		if (Input.GetKeyDown (KeyCode.Alpha1)) {
 			platformMode = 1;
