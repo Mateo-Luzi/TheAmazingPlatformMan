@@ -24,8 +24,8 @@ public class SpaceMarineController : MonoBehaviour {
 	public bool canGround = true;
 	private bool dying = false;
 
-	public int trampolineAmmo;
-	public int boosterAmmo;
+	public int trampolineAmmo = 0;
+	public int boosterAmmo = 0;
 
 	public int maxAmmo;
 
@@ -34,9 +34,6 @@ public class SpaceMarineController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		trampolineAmmo = 5;
-		boosterAmmo = 5;
 		spawnTime = Time.time;
 	}
 	
