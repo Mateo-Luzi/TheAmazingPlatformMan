@@ -9,6 +9,7 @@ TagManager:
   - BoosterPlatform
   - TrampolinePlatform
   - TrampolineAmmoDisplay
+  - ExitDoor
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -5,7 +5,7 @@ public class Exit : MonoBehaviour {
 
 
 	private SpaceMarineController player;
-	private bool finished;
+	public bool finished;
 
 	// Use this for initialization
 	void Start () {
