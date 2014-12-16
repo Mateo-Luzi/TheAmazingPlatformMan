@@ -66,9 +66,12 @@ public class boosterPlatformSpawn : MonoBehaviour {
 			col.gameObject.rigidbody2D.velocity = new Vector2(-150.0f,50.0f);
 		canCollide = false;
 
-		player.canGround = true;
-		Destroy (gameObject,1.0f);
 		audio.PlayOneShot (boosterSound);
+		yield return new WaitForSeconds (0.25f);
+		player.canGround = true;
+
+		Destroy (gameObject,0.5f);
+
 
 
 	}
