@@ -5,6 +5,7 @@ public class ProjectileSpawn : MonoBehaviour {
 
 	private SpaceMarineController player;
 	private PauseMenu pauseMenu;
+	private Exit exit;
 
 	private Vector3 finalDestination;
 	private bool cooldown = false;
@@ -34,8 +35,12 @@ public class ProjectileSpawn : MonoBehaviour {
 			try{pauseMenu = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<PauseMenu>();}
 			catch{return;}
 		}
+		if (exit == null) {
+			try{exit = GameObject.FindGameObjectWithTag ("ExitDoor").GetComponent<Exit>();}
+			catch{return;}
+		}
 
-		if(!pauseMenu.pause)
+		if(!pauseMenu.pause && !exit.finished)
 			if (Input.GetButtonDown ("Fire1")) {
 				if(player.platformMode == 1){
 					if(!cooldown){
