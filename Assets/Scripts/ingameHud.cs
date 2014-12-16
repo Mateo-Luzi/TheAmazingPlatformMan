@@ -25,9 +25,8 @@ public class ingameHud : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (player == null) {
-			player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();
-			if (player == null)
-				return;
+			try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
+			catch{return;}
 		}
 
 		timeDisplay.text = player.timeAlive.ToString("F2");

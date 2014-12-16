@@ -15,9 +15,8 @@ public class Exit : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (player == null) {
-			player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();
-			if (player == null)
-				return;
+			try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
+			catch{return;}
 		}
 	}
 

@@ -12,7 +12,6 @@ public class PlatformGunMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player").GetComponent<SpaceMarineController> ();
 		x = transform.localScale.x;
 		ls = transform.localScale;
 	}
@@ -21,9 +20,8 @@ public class PlatformGunMovement : MonoBehaviour {
 	void Update () {
 
 		if (player == null) {
-			player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();
-			if (player == null)
-				return;
+			try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
+			catch{return;}
 		}
 
 		direction = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);

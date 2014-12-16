@@ -17,9 +17,8 @@ public class PauseMenu : MonoBehaviour {
 	void Update () {
 
 		if (player == null) {
-			player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();
-			if (player == null)
-				return;
+			try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
+			catch{return;}
 		}
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {

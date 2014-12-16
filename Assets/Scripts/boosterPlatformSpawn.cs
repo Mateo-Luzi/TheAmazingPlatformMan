@@ -11,7 +11,8 @@ public class boosterPlatformSpawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player").GetComponent<SpaceMarineController> ();
+		try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
+		catch{Start ();}
 		player.boosterAmmo--;
 		Destroy (gameObject, 10.0f);
 	}
@@ -20,9 +21,8 @@ public class boosterPlatformSpawn : MonoBehaviour {
 	void Update () {
 		
 		if (player == null) {
-			player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();
-			if (player == null)
-				return;
+			try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
+			catch{return;}
 		}
 		
 	}

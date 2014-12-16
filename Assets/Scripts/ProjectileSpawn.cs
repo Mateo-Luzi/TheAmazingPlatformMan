@@ -18,7 +18,7 @@ public class ProjectileSpawn : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
-		catch{}
+		catch{Start ();}
 
 		
 	}
@@ -27,15 +27,12 @@ public class ProjectileSpawn : MonoBehaviour {
 	void Update () {
 
 		if (player == null) {
-			player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();
-			if (player == null)
-				return;
+			try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
+			catch{return;}
 		}
 		if (pauseMenu == null) {
 			try{pauseMenu = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<PauseMenu>();}
-			catch{}
-			if(pauseMenu == null)
-				return;
+			catch{return;}
 		}
 
 		if(!pauseMenu.pause)

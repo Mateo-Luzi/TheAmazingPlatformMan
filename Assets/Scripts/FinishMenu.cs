@@ -13,9 +13,8 @@ public class FinishMenu : MonoBehaviour {
 
 	void OnGUI () {
 		if (exit == null) {
-			exit = GameObject.FindGameObjectWithTag ("ExitDoor").GetComponent<Exit> ();
-			if (exit == null)
-				return;
+			try{exit = GameObject.FindGameObjectWithTag ("ExitDoor").GetComponent<Exit> ();}
+			catch{return;}
 		}
 
 		if(exit.finished == true)

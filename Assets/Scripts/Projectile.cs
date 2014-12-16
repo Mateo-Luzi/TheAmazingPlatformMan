@@ -19,7 +19,8 @@ public class Projectile : MonoBehaviour {
 
 
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player").GetComponent<SpaceMarineController> ();
+		try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
+		catch{Start ();}
 
 		// determine which platform this projectile is suppsed to spawn
 		platformMode = player.platformMode;
@@ -44,9 +45,8 @@ public class Projectile : MonoBehaviour {
 	void Update () {
 
 		if (player == null) {
-			player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();
-			if (player == null)
-				return;
+			try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
+			catch{return;}
 		}
 		
 		transform.position = Vector3.MoveTowards (transform.position, finalDestination,2.5f);
