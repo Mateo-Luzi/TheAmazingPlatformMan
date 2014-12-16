@@ -4,15 +4,23 @@ using System.Collections;
 public class ProjectileSpawn : MonoBehaviour {
 
 	private SpaceMarineController player;
-	public Rigidbody2D projectilePrefab;
+	private PauseMenu pauseMenu;
+
 	private Vector3 finalDestination;
+	private bool cooldown = false;
+
+
+	public Rigidbody2D projectilePrefab;
 	public AudioClip projectileShotSound;
 	public AudioClip outOfAmmoSound;
 
+
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player").GetComponent<SpaceMarineController> ();
+		try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
+		catch{}
 
+		
 	}
 	
 	// Update is called once per frame
@@ -23,25 +31,39 @@ public class ProjectileSpawn : MonoBehaviour {
 			if (player == null)
 				return;
 		}
-		
-		
-		if (Input.GetButtonDown ("Fire1")) {
-
-			if(player.platformMode == 1){
-				Instantiate(projectilePrefab, transform.position, transform.rotation);
-				audio.PlayOneShot (projectileShotSound);
-			}
-			else if(player.platformMode == 2 && player.trampolineAmmo > 0){
-				Instantiate(projectilePrefab, transform.position, transform.rotation);
-				audio.PlayOneShot (projectileShotSound);
-			}
-			else if(player.platformMode == 3 && player.boosterAmmo > 0){
-				Instantiate(projectilePrefab, transform.position, transform.rotation);
-				audio.PlayOneShot (projectileShotSound);
-			}else
-				audio.PlayOneShot (outOfAmmoSound);
-
-
+		if (pauseMenu == null) {
+			try{pauseMenu = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<PauseMenu>();}
+			catch{}
+			if(pauseMenu == null)
+				return;
 		}
+
+		if(!pauseMenu.pause)
+			if (Input.GetButtonDown ("Fire1")) {
+				if(player.platformMode == 1){
+					if(!cooldown){
+						cooldown = true;
+						Instantiate(projectilePrefab, transform.position, transform.rotation);
+						audio.PlayOneShot (projectileShotSound);
+						StartCoroutine(resetCooldown ());
+					}
+				}
+				else if(player.platformMode == 2 && player.trampolineAmmo > 0){
+					Instantiate(projectilePrefab, transform.position, transform.rotation);
+					audio.PlayOneShot (projectileShotSound);
+				}
+				else if(player.platformMode == 3 && player.boosterAmmo > 0){
+					Instantiate(projectilePrefab, transform.position, transform.rotation);
+					audio.PlayOneShot (projectileShotSound);
+				}else
+					audio.PlayOneShot (outOfAmmoSound);
+
+
+			}
+	}
+
+	IEnumerator resetCooldown(){
+		yield return new WaitForSeconds(0.33f);
+		cooldown = false;
 	}
 }
