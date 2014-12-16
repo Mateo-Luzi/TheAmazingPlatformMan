@@ -602,6 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e79a352eebc1d04794576bcc1da5537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finished: 0
 --- !u!61 &259424378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3241,15 +3242,15 @@ MonoBehaviour:
   m_Color: {r: .984313726, g: .984313726, b: .984313726, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 442c5b5b60a535041b1171513c593318, type: 3}
-    m_FontSize: 24
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\u221E"
 --- !u!222 &1158714350
@@ -3497,6 +3498,8 @@ GameObject:
   - 114: {fileID: 1303132370}
   - 114: {fileID: 1303132371}
   - 82: {fileID: 1303132372}
+  - 114: {fileID: 1303132374}
+  - 114: {fileID: 1303132373}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3658,6 +3661,29 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1303132373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1303132364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc8a1d703661db44b6fefed9c93c41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1303132374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1303132364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed3d7c96f904c12428b9ae4b3c8a00f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: 0
 --- !u!1 &1341343139
 GameObject:
   m_ObjectHideFlags: 0
