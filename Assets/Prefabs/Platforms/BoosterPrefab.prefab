@@ -25,7 +25,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 50: {fileID: 5000000}
-  - 61: {fileID: 6100002}
   - 114: {fileID: 11400000}
   - 61: {fileID: 6100000}
   - 82: {fileID: 8200000}
@@ -85,19 +84,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 5.01999998, y: 1.14999998}
-  m_Center: {x: -.0599999987, y: .0399999991}
---- !u!61 &6100002
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 0
-  m_Material: {fileID: 6200000, guid: 31a072cd94ae47f47a3fb9d7e30c016c, type: 2}
-  m_IsTrigger: 0
-  m_Size: {x: 5.1002717, y: .509537041}
-  m_Center: {x: -.0294277668, y: .00980949402}
+  m_Size: {x: 6.0999999, y: 1.37}
+  m_Center: {x: .00999999978, y: .0399999991}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1

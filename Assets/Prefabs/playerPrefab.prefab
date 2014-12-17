@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 50: {fileID: 5000000}
-  - 58: {fileID: 5800000}
   - 114: {fileID: 11400000}
   - 61: {fileID: 6100000}
   - 82: {fileID: 8200000}
@@ -95,7 +94,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -75.7900009, y: -6.09000015, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.00514817, y: 1.00514913, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -122,7 +121,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .076703012, y: -2.53529215, z: 0}
+  m_LocalPosition: {x: -.150000006, y: -2.50200009, z: 0}
   m_LocalScale: {x: .591701508, y: .59170121, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -182,17 +181,6 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
---- !u!58 &5800000
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: 31a072cd94ae47f47a3fb9d7e30c016c, type: 2}
-  m_IsTrigger: 0
-  m_Radius: 1.16999996
-  m_Center: {x: -.289999992, y: -1.38999999}
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -202,8 +190,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 31a072cd94ae47f47a3fb9d7e30c016c, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: 2.1400001, y: 3.72000003}
-  m_Center: {x: -.280000001, y: .610000014}
+  m_Size: {x: 2.17039657, y: 4.94353724}
+  m_Center: {x: -.158406138, y: -.00176095217}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -335,7 +323,7 @@ MonoBehaviour:
   grounded: 0
   platformMode: 1
   move: 0
-  maxSpeed: 30
+  maxSpeed: 25
   jumpVelocity: 60
   groundCheck: {fileID: 400004}
   whatIsGround:
@@ -350,6 +338,8 @@ MonoBehaviour:
   trampolineAmmo: 0
   boosterAmmo: 0
   maxAmmo: 50
+  timeAlive: 0
+  spawnTime: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

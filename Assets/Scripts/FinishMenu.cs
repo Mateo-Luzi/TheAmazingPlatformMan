@@ -34,9 +34,7 @@ public class FinishMenu : MonoBehaviour {
 
 		if (exit.finished == true) {
 			windowRect = GUI.Window (0, windowRect, windowFunc, "Level Complete!");
-			Debug.Log(windowRect);
 			pause = true;
-			Debug.Log(pause);
 		}
 	}
 	

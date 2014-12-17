@@ -19,11 +19,13 @@ private var thisTransform : Transform;
 	}
 	function FixedUpdate ()
 	{
-		if (player == null) {
-			player = GameObject.FindGameObjectWithTag("Player");
-			cameraTarget = GameObject.FindGameObjectWithTag("Player");
-			if (player == null)
+		if (player == null || cameraTarget == null) {
+			try{
+				player = GameObject.FindGameObjectWithTag("Player");
+				cameraTarget = player;
+			}catch(err){
 				return;
+			}	
 		}
 	
 	
@@ -43,10 +45,4 @@ private var thisTransform : Transform;
 		}
 		
 		
-	}
-	
-	
-	
-	function Update(){
-
 	}
