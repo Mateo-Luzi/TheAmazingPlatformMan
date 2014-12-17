@@ -12,7 +12,7 @@ public class SpaceMarineController : MonoBehaviour {
 	public float maxSpeed;
 	public float jumpVelocity;
 	
-	private float groundRadius = 0.2f;
+	private float groundRadius = 0.5f;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
 	
