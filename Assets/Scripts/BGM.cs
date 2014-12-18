@@ -7,7 +7,10 @@ public class BGM : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		DontDestroyOnLoad(gameObject);
+		if(GameObject.FindObjectsOfType<BGM>().Length > 1)
+			Destroy (gameObject);
+		else
+			DontDestroyOnLoad(gameObject);
 	}
 	
 	// Update is called once per frame
@@ -17,7 +20,6 @@ public class BGM : MonoBehaviour {
 			camera = GameObject.Find ("Main Camera");
 		else
 			gameObject.transform.position = camera.transform.position;
-
 	}
 
 }
