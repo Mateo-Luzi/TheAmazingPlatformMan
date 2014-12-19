@@ -202,7 +202,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3ade2d34c57bd574f9874c365f06c268, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ade2d34c57bd574f9874c365f06c268, type: 2}
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .984313726, g: .984313726, b: .984313726, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 442c5b5b60a535041b1171513c593318, type: 3}
     m_FontSize: 20
@@ -467,7 +467,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9e7020658f2582e468c39019bcffbd8b, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e7020658f2582e468c39019bcffbd8b, type: 2}
@@ -525,15 +525,15 @@ MonoBehaviour:
   m_Color: {r: .984313726, g: .984313726, b: .984313726, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 442c5b5b60a535041b1171513c593318, type: 3}
-    m_FontSize: 24
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\u221E"
 --- !u!222 &548579439
@@ -584,7 +584,7 @@ TextMesh:
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
 --- !u!114 &687113248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1923,7 +1923,6 @@ GameObject:
   - 114: {fileID: 782795437}
   - 61: {fileID: 782795436}
   - 61: {fileID: 782795435}
-  - 61: {fileID: 782795434}
   m_Layer: 0
   m_Name: StandardPlatform
   m_TagString: StandardPlatform
@@ -1931,18 +1930,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &782795434
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100004, guid: 10c09ef3ded3b7a41b7faa51f665b310,
-    type: 2}
-  m_PrefabInternal: {fileID: 1809289618}
-  m_GameObject: {fileID: 782795433}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 3.97000003, y: .400000006}
-  m_Center: {x: 0, y: -.5}
 --- !u!61 &782795435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1953,7 +1940,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 31a072cd94ae47f47a3fb9d7e30c016c, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: 4.98999977, y: .389999986}
+  m_Size: {x: 6.3499999, y: .389999986}
   m_Center: {x: 0, y: 0}
 --- !u!61 &782795436
 BoxCollider2D:
@@ -1965,7 +1952,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 31a072cd94ae47f47a3fb9d7e30c016c, type: 2}
   m_IsTrigger: 1
-  m_Size: {x: 4.71999979, y: .219999999}
+  m_Size: {x: 5.92000008, y: .219999999}
   m_Center: {x: .00999999978, y: .239999995}
 --- !u!114 &782795437
 MonoBehaviour:
@@ -2646,7 +2633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7b66fb4fc343a49892fcf385c6cc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 8300000, guid: cbb26b041004f77459aa1d5b55ece668, type: 3}
 --- !u!82 &1303132372
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3113,7 +3099,7 @@ TextMesh:
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
 --- !u!114 &1574274825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3390,7 +3376,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c29b77cde04f6b8408fbe595841ec534, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c29b77cde04f6b8408fbe595841ec534, type: 2}
@@ -3498,7 +3484,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 10c09ef3ded3b7a41b7faa51f665b310, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10c09ef3ded3b7a41b7faa51f665b310, type: 2}
