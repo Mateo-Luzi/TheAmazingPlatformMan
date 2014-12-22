@@ -77,7 +77,7 @@ GameObject:
   - 4: {fileID: 400010}
   - 114: {fileID: 11400004}
   m_Layer: 0
-  m_Name: level_1_0
+  m_Name: alpha_demo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -3411,7 +3411,7 @@ GameObject:
   - 4: {fileID: 1300916290}
   - 114: {fileID: 1300916291}
   m_Layer: 0
-  m_Name: level_1_0
+  m_Name: alpha_demo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
