@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="63" height="50" tilewidth="96" tileheight="96">
+ <properties>
+  <property name="unity:scale" value="0.03"/>
+ </properties>
+ <tileset firstgid="1" name="spacestation_wall" tilewidth="96" tileheight="96">
+  <image source="../Tilesets/spacestation_wall.png" width="480" height="288"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object x="48" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="2">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+    <object x="0" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+    <object x="48" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index">
+    <object x="48" y="0" width="48" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="48" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="48" height="48"/>
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index">
+    <object x="48" y="0" width="48" height="48"/>
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <objectgroup draworder="index">
+    <object x="48" y="0" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="12">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="16" name="spacestation_trap" tilewidth="96" tileheight="96">
+  <image source="../Tilesets/spacestation_trap.png" width="384" height="480"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object x="72" y="48" width="24" height="24"/>
+    <object x="48" y="72" width="48" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="2">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="24" height="24"/>
+    <object x="0" y="72" width="48" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index">
+    <object x="48" y="0" width="48" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object x="48" y="0" width="48" height="24"/>
+    <object x="72" y="24" width="24" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="48" height="24"/>
+    <object x="0" y="24" width="24" height="24"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="48" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+    <object x="0" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+    <object x="48" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+    <object x="0" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+    <object x="48" y="48" width="48" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="12">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="48" height="48"/>
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="13">
+   <objectgroup draworder="index">
+    <object x="48" y="0" width="48" height="48"/>
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="14">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="48" height="48"/>
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="15">
+   <objectgroup draworder="index">
+    <object x="48" y="0" width="48" height="48"/>
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="16">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="17">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="48" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="18">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="19">
+   <objectgroup draworder="index">
+    <object x="48" y="0" width="48" height="96"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="63" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt2lsLgzAMhuE4dz5c7N79/7+5Fhx0TpYi3UzaN/DhTYh9rlLETkQ2DaYP2YdsQ66Osws5JNE8sf842uPTc0VDatc8LzN234UdO3a9Hzt2z4UdO3a9Hzt2z4UdO3a937q9k89vbHNVoz3XhB07dn0uduwWq0Z76b3tyV7ahB07dv392LH/s2q0r7W3LdjXMmFv036R9/+obhnnrMW+5JzYsZeaWZvd+t7OPV86N9dufXf9csdZN2FfZj/J93/Nz5PZQ8h9Jg8jfTmeaJ/eiVpJvPs9AbvmHEM=
+  </data>
+ </layer>
+</map>
