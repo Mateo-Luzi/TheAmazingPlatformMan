@@ -328,7 +328,7 @@ MonoBehaviour:
   groundCheck: {fileID: 400004}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 4294966527
   jumpSound: {fileID: 8300000, guid: cc992d15a3d697145a78c3c78f2d992b, type: 3}
   switchWeaponSound: {fileID: 8300000, guid: 47a0c1388580e9f469305cae15d0de96, type: 3}
   deathSound: {fileID: 8300000, guid: c47ab0c6cbc4e8248a3cabd5ab0c7ceb, type: 3}
