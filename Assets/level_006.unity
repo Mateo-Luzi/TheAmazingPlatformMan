@@ -395,7 +395,7 @@ GameObject:
   - 23: {fileID: 225048860}
   - 114: {fileID: 225048859}
   - 102: {fileID: 225048858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ GameObject:
   - 23: {fileID: 265289255}
   - 114: {fileID: 265289254}
   - 102: {fileID: 265289253}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1939,7 +1939,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 341789585}
   - 212: {fileID: 341789584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2190,7 +2190,7 @@ GameObject:
   - 23: {fileID: 440536181}
   - 114: {fileID: 440536180}
   - 102: {fileID: 440536179}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2399,7 +2399,7 @@ GameObject:
   - 23: {fileID: 570475708}
   - 114: {fileID: 570475707}
   - 102: {fileID: 570475706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2618,7 +2618,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 645595688}
   - 212: {fileID: 645595689}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2923,7 +2923,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 860487303}
   - 212: {fileID: 860487302}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3026,7 +3026,7 @@ GameObject:
   - 23: {fileID: 967698734}
   - 114: {fileID: 967698733}
   - 102: {fileID: 967698732}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3355,7 +3355,7 @@ GameObject:
   - 23: {fileID: 1044594313}
   - 114: {fileID: 1044594312}
   - 102: {fileID: 1044594311}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3665,7 +3665,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1295543805}
   - 212: {fileID: 1295543806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3905,7 +3905,7 @@ GameObject:
   - 23: {fileID: 1332136975}
   - 114: {fileID: 1332136974}
   - 102: {fileID: 1332136973}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4062,7 +4062,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1412381118}
   - 212: {fileID: 1412381117}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4186,7 +4186,7 @@ GameObject:
   - 23: {fileID: 1501405332}
   - 114: {fileID: 1501405331}
   - 102: {fileID: 1501405330}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4343,7 +4343,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1589750701}
   - 212: {fileID: 1589750700}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4394,7 +4394,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1619228880}
   - 212: {fileID: 1619228881}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4719,7 +4719,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1779233228}
   - 212: {fileID: 1779233227}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4774,7 +4774,7 @@ GameObject:
   - 23: {fileID: 1781059886}
   - 114: {fileID: 1781059885}
   - 102: {fileID: 1781059884}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4931,7 +4931,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1837909526}
   - 212: {fileID: 1837909527}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
