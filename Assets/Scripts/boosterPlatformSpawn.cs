@@ -28,7 +28,11 @@ public class boosterPlatformSpawn : MonoBehaviour {
 			try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
 			catch{return;}
 		}
-
+		if (player.facingRight)
+						transform.rotation = Quaternion.Euler (0, 0, -270f);
+		else
+			transform.rotation = Quaternion.Euler (0, 0, -90f);
+		
 		// directional booster test code
 //		pos = Camera.main.WorldToScreenPoint(transform.position);
 //		dir = Input.mousePosition - pos;
