@@ -69,6 +69,8 @@ public class boosterPlatformSpawn : MonoBehaviour {
 
 		// make sure player cannot move character
 		player.canMove = false;
+		player.canGround = false;
+		player.grounded = false;
 		player.move = 0;
 
 		if(player.facingRight)
@@ -84,6 +86,7 @@ public class boosterPlatformSpawn : MonoBehaviour {
 		audio.PlayOneShot (boosterSound);
 		yield return new WaitForSeconds (0.25f);
 
+		player.canGround = true;
 		Destroy (gameObject,0.5f);
 
 
