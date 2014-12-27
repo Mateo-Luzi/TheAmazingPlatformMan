@@ -8,6 +8,10 @@ public class boosterPlatformSpawn : MonoBehaviour {
 	public float trampolineJumpVelocity;
 	public AudioClip boosterSound;
 
+	// directional booster test code
+	Vector3 pos;
+	Vector3 dir;
+	float angle;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +28,13 @@ public class boosterPlatformSpawn : MonoBehaviour {
 			try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
 			catch{return;}
 		}
+
+		// directional booster test code
+//		pos = Camera.main.WorldToScreenPoint(transform.position);
+//		dir = Input.mousePosition - pos;
+//		angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+//		angle += 90f;
+//		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward); 
 		
 	}
 	
@@ -54,21 +65,20 @@ public class boosterPlatformSpawn : MonoBehaviour {
 
 		// make sure player cannot move character
 		player.canMove = false;
-		player.canGround = false;
-		player.grounded = false;
 		player.move = 0;
-		col.gameObject.rigidbody2D.velocity = new Vector2(0,0);
-
 
 		if(player.facingRight)
 			col.gameObject.rigidbody2D.velocity = new Vector2(150.0f,50.0f);
 		else
 			col.gameObject.rigidbody2D.velocity = new Vector2(-150.0f,50.0f);
+
+		// directional booster test code
+		//col.gameObject.rigidbody2D.velocity = dir.normalized * 150.0f;
+
 		canCollide = false;
 
 		audio.PlayOneShot (boosterSound);
 		yield return new WaitForSeconds (0.25f);
-		player.canGround = true;
 
 		Destroy (gameObject,0.5f);
 
