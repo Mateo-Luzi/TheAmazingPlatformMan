@@ -30,12 +30,12 @@ public class Exit : MonoBehaviour {
 		if (col.gameObject.tag == "Player" && !finished) {
 			finished = true;
 
+			finishMenu.pauseGame();
+
 			if(PlayerPrefs.HasKey(Application.loadedLevelName))
 			   saveHighscore();
 			else
 				PlayerPrefs.SetFloat(Application.loadedLevelName, player.timeAlive);
-
-			finishMenu.pauseGame();
 		}
 	}
 

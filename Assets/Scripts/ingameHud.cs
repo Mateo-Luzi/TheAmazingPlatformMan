@@ -23,9 +23,9 @@ public class ingameHud : MonoBehaviour {
 		boosterColor = booster.color;
 
 		if (PlayerPrefs.HasKey (Application.loadedLevelName))
-			highscoreDisplay.text = PlayerPrefs.GetFloat (Application.loadedLevelName).ToString("F2");
+			highscoreDisplay.text = "Best: " + PlayerPrefs.GetFloat(Application.loadedLevelName).ToString();
 		else
-			highscoreDisplay.text = "-";
+			highscoreDisplay.text = "Best: -";
 				
 
 	}
@@ -37,7 +37,7 @@ public class ingameHud : MonoBehaviour {
 			catch{return;}
 		}
 
-		timeDisplay.text = player.timeAlive.ToString("F2");
+		timeDisplay.text = player.timeAlive.ToString();
 
 		trampolineAmmoDisplay.text = player.trampolineAmmo + "/" + player.maxAmmo;
 		boosterAmmoDisplay.text = player.boosterAmmo + "/" + player.maxAmmo;
