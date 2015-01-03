@@ -47,7 +47,7 @@ private var thisTransform : Transform;
 		if (cameraFollowY){
 			smoothTimeY = (velocity.y)/100;		
 			thisTransform.position.y = Mathf.SmoothDamp (thisTransform.position.y , cameraTarget.transform.position.y , velocity.y, smoothTimeY);
-			thisTransform.camera.orthographicSize = Mathf.SmoothDamp(thisTransform.camera.orthographicSize, Mathf.Exp(Mathf.Abs(cameraTarget.transform.rigidbody2D.velocity.y)/30) + standardCameraSize, currentCameraSize, 0.66f);
+			thisTransform.camera.orthographicSize = Mathf.SmoothDamp(thisTransform.camera.orthographicSize, Mathf.Exp(Mathf.Abs(cameraTarget.transform.rigidbody2D.velocity.y)/25) + standardCameraSize, currentCameraSize, 1.5f);
 		}
 		if (!cameraFollowX && cameraFollowHeight)
 		{
