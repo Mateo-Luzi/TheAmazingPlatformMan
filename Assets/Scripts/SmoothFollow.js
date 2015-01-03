@@ -21,8 +21,8 @@ private var thisTransform : Transform;
 		 standardCameraSize = thisTransform.camera.orthographicSize;
 		 
 		 for (var child : Transform in transform) {
-			     child.transform.localScale.x = child.transform.localScale.x * 1.4;
-			     child.transform.localScale.y = child.transform.localScale.y * 1.4;
+			     child.transform.localScale.x = child.transform.localScale.x * 2;
+			     child.transform.localScale.y = child.transform.localScale.y * 2;
 			}
 
 	}
