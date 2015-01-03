@@ -8,7 +8,7 @@ public class standardPlatformSpawn : MonoBehaviour {
 	CircleCollider2D[] playerCircleColliderList;
 	Vector3 distanceFromPlayer;
 	Color defaultColor;
-	float destroyDuration = 1.5f;
+	float destroyDuration = 1.85f;
 	bool fading = false;
 	float lerp;
 	Color colorFaded;
@@ -31,7 +31,7 @@ public class standardPlatformSpawn : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D  col){
 		if (col.gameObject.tag == "Player") {
-			Invoke ("DestroyPlatform", destroyDuration);
+			Destroy (gameObject, 2.0f);
 			fading = true;
 		}
 		if (col.gameObject.tag == "Ground")
