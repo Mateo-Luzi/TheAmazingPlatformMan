@@ -2662,7 +2662,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 2b43a37976d41274ba1bf0b993f869a7, type: 2}
+  - {fileID: 2100000, guid: 221ec2ab814804f41bda3193d77d2c3c, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

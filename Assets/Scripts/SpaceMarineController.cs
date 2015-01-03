@@ -33,9 +33,14 @@ public class SpaceMarineController : MonoBehaviour {
 	public float timeAlive;
 	public float spawnTime;
 
+	public float amplitude;
+	public float tempAmplitude;
+	private float originalRange;
+
 	// Use this for initialization
 	void Start () {
 		spawnTime = Time.time;
+		originalRange = gameObject.light.range;
 	}
 	
 
@@ -79,6 +84,9 @@ public class SpaceMarineController : MonoBehaviour {
 			audio.PlayOneShot (switchWeaponSound);
 		}
 
+
+		amplitude = Mathf.PingPong(Time.time * 1.25f, 3.0f);
+		gameObject.light.range = originalRange - amplitude;
 	}
 
 	public void Flip(){
