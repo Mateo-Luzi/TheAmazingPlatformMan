@@ -1438,7 +1438,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 326076191}
   - 212: {fileID: 326076190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1678,7 +1678,7 @@ GameObject:
   - 23: {fileID: 524199091}
   - 114: {fileID: 524199090}
   - 102: {fileID: 524199089}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1859,6 +1859,7 @@ RectTransform:
   - {fileID: 1499867058}
   - {fileID: 1010218393}
   - {fileID: 1755301635}
+  - {fileID: 1923137513}
   - {fileID: 1942991678}
   m_Father: {fileID: 838984030}
   m_RootOrder: 0
@@ -1887,7 +1888,8 @@ MonoBehaviour:
   boosterColor: {r: 0, g: 0, b: 0, a: 0}
   trampolineAmmoDisplay: {fileID: 1499867059}
   boosterAmmoDisplay: {fileID: 1755301636}
-  timeDisplay: {fileID: 1942991679}
+  highscoreDisplay: {fileID: 1942991679}
+  timeDisplay: {fileID: 1923137514}
 --- !u!1001 &629535825
 Prefab:
   m_ObjectHideFlags: 0
@@ -2185,7 +2187,7 @@ GameObject:
   - 23: {fileID: 878513625}
   - 114: {fileID: 878513624}
   - 102: {fileID: 878513623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2415,7 +2417,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 6f3a9e4a7c97e6e42b93b036ae49cee6, type: 2}
+  - {fileID: 2100000, guid: 84725fc3f0e12844a81ac2e01dcb5b4f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2515,7 +2517,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1047543921}
   - 212: {fileID: 1047543922}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2570,7 +2572,7 @@ GameObject:
   - 23: {fileID: 1130946775}
   - 114: {fileID: 1130946774}
   - 102: {fileID: 1130946773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3065,7 +3067,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1363701709}
   - 212: {fileID: 1363701710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3116,7 +3118,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1385366103}
   - 212: {fileID: 1385366104}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3288,7 +3290,7 @@ GameObject:
   - 23: {fileID: 1639313830}
   - 114: {fileID: 1639313829}
   - 102: {fileID: 1639313828}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boosterAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3620,6 +3622,75 @@ Prefab:
   m_RootGameObject: {fileID: 325421587}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1923137512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100016, guid: 9a5891c9d1a56f34289893064dcf47b1, type: 2}
+  m_PrefabInternal: {fileID: 1184130089}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1923137513}
+  - 222: {fileID: 1923137515}
+  - 114: {fileID: 1923137514}
+  m_Layer: 5
+  m_Name: Time
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1923137513
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400016, guid: 9a5891c9d1a56f34289893064dcf47b1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1184130089}
+  m_GameObject: {fileID: 1923137512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 615548191}
+  m_RootOrder: 6
+  m_AnchorMin: {x: 1, y: .5}
+  m_AnchorMax: {x: 1, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 150, y: 30}
+  m_Pivot: {x: 1, y: .5}
+--- !u!114 &1923137514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400016, guid: 9a5891c9d1a56f34289893064dcf47b1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1184130089}
+  m_GameObject: {fileID: 1923137512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 442c5b5b60a535041b1171513c593318, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1923137515
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200014, guid: 9a5891c9d1a56f34289893064dcf47b1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1184130089}
+  m_GameObject: {fileID: 1923137512}
 --- !u!1 &1942991677
 GameObject:
   m_ObjectHideFlags: 0
@@ -3631,7 +3702,7 @@ GameObject:
   - 222: {fileID: 1942991680}
   - 114: {fileID: 1942991679}
   m_Layer: 5
-  m_Name: Time
+  m_Name: LevelHighscore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3649,10 +3720,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 615548191}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -150, y: 0}
   m_SizeDelta: {x: 150, y: 30}
   m_Pivot: {x: 1, y: .5}
 --- !u!114 &1942991679
@@ -3668,7 +3739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 442c5b5b60a535041b1171513c593318, type: 3}
     m_FontSize: 20
@@ -3676,7 +3747,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
