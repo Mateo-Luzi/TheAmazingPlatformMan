@@ -43,6 +43,52 @@ public class FinishMenu : MonoBehaviour {
 			Application.LoadLevel (Application.loadedLevelName);
 			Time.timeScale = 1;
 		}
+		if (GUILayout.Button ("Next Level")) {
+			switch (Application.loadedLevelName){
+			case "alpha_demo":
+				Application.LoadLevel("level_001");
+				Time.timeScale = 1;
+				break;
+			case "level_001":
+				Application.LoadLevel("level_002");
+				Time.timeScale = 1;
+				break;
+			case "level_002":
+				Application.LoadLevel("level_003");
+				Time.timeScale = 1;
+				break;
+			case "level_003":
+				Application.LoadLevel("level_004");
+				Time.timeScale = 1;
+				break;
+			case "level_004":
+				Application.LoadLevel("level_005");
+				Time.timeScale = 1;
+				break;
+			case "level_005":
+				Application.LoadLevel("level_006");
+				Time.timeScale = 1;
+				break;
+			case "level_006":
+				Application.LoadLevel("level_007");
+				Time.timeScale = 1;
+				break;
+			case "level_007":
+				Application.LoadLevel("level_008");
+				Time.timeScale = 1;
+				break;
+			case "level_008":
+				Application.LoadLevel("level_009");
+				Time.timeScale = 1;
+				break;
+			case "level_009":
+				Application.LoadLevel("highScores");
+				Time.timeScale = 1;
+				break;
+			default:
+				break;
+			}
+		}
 		if (GUILayout.Button ("Exit to Main Menu")) {
 			Application.LoadLevel ("mainMenu");
 			Time.timeScale = 1;

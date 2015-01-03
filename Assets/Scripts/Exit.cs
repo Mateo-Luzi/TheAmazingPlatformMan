@@ -29,7 +29,18 @@ public class Exit : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D col){
 		if (col.gameObject.tag == "Player" && !finished) {
 			finished = true;
+
+			if(PlayerPrefs.HasKey(Application.loadedLevelName))
+			   saveHighscore();
+			else
+				PlayerPrefs.SetFloat(Application.loadedLevelName, player.timeAlive);
+
 			finishMenu.pauseGame();
 		}
+	}
+
+	private void saveHighscore(){
+		if(player.timeAlive < PlayerPrefs.GetFloat(Application.loadedLevelName))
+			PlayerPrefs.SetFloat(Application.loadedLevelName, player.timeAlive);
 	}
 }

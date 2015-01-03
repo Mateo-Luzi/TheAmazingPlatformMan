@@ -1963,7 +1963,7 @@ GameObject:
   - 114: {fileID: 1188746051}
   - 114: {fileID: 1188746050}
   m_Layer: 5
-  m_Name: Start Game
+  m_Name: Demo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2177,7 +2177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Tutorial
+  m_Text: 'Demo
 
 '
 --- !u!222 &1386437565

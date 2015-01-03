@@ -13,6 +13,7 @@ public class ingameHud : MonoBehaviour {
 	public Color boosterColor;
 	public Text trampolineAmmoDisplay;
 	public Text boosterAmmoDisplay;
+	public Text highscoreDisplay;
 	public Text timeDisplay;
 
 	// Use this for initialization
@@ -20,6 +21,13 @@ public class ingameHud : MonoBehaviour {
 		standardColor = standard.color;
 		trampolineColor = trampoline.color;
 		boosterColor = booster.color;
+
+		if (PlayerPrefs.HasKey (Application.loadedLevelName))
+			highscoreDisplay.text = PlayerPrefs.GetFloat (Application.loadedLevelName).ToString("F2");
+		else
+			highscoreDisplay.text = "-";
+				
+
 	}
 	
 	// Update is called once per frame
