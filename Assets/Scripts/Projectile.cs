@@ -72,11 +72,11 @@ public class Projectile : MonoBehaviour {
 
 	// destroy projectile if it collides with anything other than the player or projectiles
 	void OnCollisionEnter2D(Collision2D  col){
-		if (col.gameObject.tag != "Projectile" && col.gameObject.tag != "Player")
+		if (col.gameObject.tag != "Projectile" && col.gameObject.tag != "Player" && col.gameObject.tag != "Ammo")
 			Destroy(gameObject);	
 	}
 	void OnTriggerEnter2D(Collider2D  col){
-		if (col.gameObject.tag != "Projectile" && col.gameObject.tag != "Player")
+		if (col.gameObject.tag != "Projectile" && col.gameObject.tag != "Player" && col.gameObject.tag != "Ammo")
 			Destroy(gameObject);	
 	}
 
