@@ -14,23 +14,34 @@ namespace Tiled2Unity
         public int TileWidth = 0;
         public int TileHeight = 0;
 
-        public int GetMapWidthInPixels()
+        public float GetMapWidthInPixels()
         {
             return this.NumTilesWide * this.TileWidth;
         }
 
-        public int GetMapHeightInPixels()
+        public float GetMapHeightInPixels()
         {
             return this.NumTilesHigh * this.TileHeight;
         }
+
+        public float GetMapWidthInPixelsScaled()
+        {
+            return GetMapWidthInPixels() * this.transform.lossyScale.x;
+        }
+
+        public float GetMapHeightInPixelsScaled()
+        {
+            return GetMapHeightInPixels() * this.transform.lossyScale.y;
+        }
+
 
         private void OnDrawGizmosSelected()
         {
             Vector2 pos_w = this.gameObject.transform.position;
             Vector2 topLeft = Vector2.zero + pos_w;
-            Vector2 topRight = new Vector2(GetMapWidthInPixels(), 0) + pos_w;
-            Vector2 bottomRight = new Vector2(GetMapWidthInPixels(), -GetMapHeightInPixels()) + pos_w;
-            Vector2 bottomLeft = new Vector2(0, -GetMapHeightInPixels()) + pos_w;
+            Vector2 topRight = new Vector2(GetMapWidthInPixelsScaled(), 0) + pos_w;
+            Vector2 bottomRight = new Vector2(GetMapWidthInPixelsScaled(), -GetMapHeightInPixelsScaled()) + pos_w;
+            Vector2 bottomLeft = new Vector2(0, -GetMapHeightInPixelsScaled()) + pos_w;
 
             Gizmos.color = Color.blue;
             Gizmos.DrawLine(topLeft, topRight);

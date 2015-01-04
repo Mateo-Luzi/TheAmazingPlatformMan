@@ -1366,11 +1366,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 404bc8007d8beb24197fe96f5a094599, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 57.4199982
+      value: 57.4000015
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 404bc8007d8beb24197fe96f5a094599, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -15.0799999
+      value: -15.6999998
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 404bc8007d8beb24197fe96f5a094599, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1418,11 +1418,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 3ade2d34c57bd574f9874c365f06c268, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.1652088
+      value: 13.1999998
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3ade2d34c57bd574f9874c365f06c268, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -136.393402
+      value: -135.5
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3ade2d34c57bd574f9874c365f06c268, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1804,7 +1804,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -2416,7 +2415,7 @@ Transform:
   m_PrefabInternal: {fileID: 418124457}
   m_GameObject: {fileID: 1190984819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.1652088, y: -136.393402, z: 0}
+  m_LocalPosition: {x: 13.1999998, y: -135.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 470179966}
@@ -2446,7 +2445,7 @@ Transform:
   m_PrefabInternal: {fileID: 407708036}
   m_GameObject: {fileID: 1297033812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 57.4199982, y: -15.0799999, z: -10}
+  m_LocalPosition: {x: 57.4000015, y: -15.6999998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2646,18 +2645,18 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: 2256, y: -720}
-      - {x: 2256, y: -48}
-      - {x: 48, y: -48}
-      - {x: 48, y: -4752}
-      - {x: 1680, y: -4752}
-      - {x: 1680, y: -720}
-    - - {x: 2160, y: -144}
-      - {x: 2160, y: -624}
-      - {x: 1584, y: -624}
-      - {x: 1584, y: -4656}
-      - {x: 144, y: -4656}
-      - {x: 144, y: -144}
+    - - {x: 2304, y: -864}
+      - {x: 2304, y: 0}
+      - {x: 0, y: 0}
+      - {x: 0, y: -4800}
+      - {x: 1728, y: -4800}
+      - {x: 1728, y: -864}
+    - - {x: 2112, y: -192}
+      - {x: 2112, y: -672}
+      - {x: 1536, y: -672}
+      - {x: 1536, y: -4608}
+      - {x: 192, y: -4608}
+      - {x: 192, y: -192}
 --- !u!1 &1499867057
 GameObject:
   m_ObjectHideFlags: 0
