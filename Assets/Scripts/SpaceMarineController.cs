@@ -37,16 +37,31 @@ public class SpaceMarineController : MonoBehaviour {
 	public float tempAmplitude;
 	private float originalRange;
 
+	private Vector3 originalScale;
+	private float tempVelocity;
+
+
 	// Use this for initialization
 	void Start () {
 		spawnTime = Time.time;
 		originalRange = gameObject.light.range;
+		originalScale = transform.localScale;
+
 	}
 	
 
 	void FixedUpdate () {
 		if (canMove == true) 
 			rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
+
+		if (gameObject.rigidbody2D.velocity.y >= 0) {
+			float newYVelocity = Mathf.SmoothDamp (originalScale.y, (originalScale.y - (Mathf.Abs (gameObject.rigidbody2D.velocity.y) / 3)), ref tempVelocity, 0.075f);
+			if(newYVelocity < 0.2f)
+				newYVelocity = 0.2f;
+			transform.localScale = new Vector3 (originalScale.x, newYVelocity, originalScale.z);
+		}
+
+
 	}
 	// Update is called once per frame
 	void Update(){
@@ -94,6 +109,7 @@ public class SpaceMarineController : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+		originalScale.x *= -1;
 	}
 
 	public void Die(){
