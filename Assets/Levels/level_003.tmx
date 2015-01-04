@@ -190,9 +190,22 @@
    </objectgroup>
   </tile>
  </tileset>
+ <tileset firstgid="36" name="spacestation_background" tilewidth="96" tileheight="96">
+  <image source="../Tilesets/spacestation_background.png" width="192" height="384"/>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+ </tileset>
  <layer name="Tile Layer 1" width="24" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt2LEOgCAMRdGHqBGV//9dayKbdtCSOFySGybO1IUmSUOnsjVbo7UHN1nL5Z939Gkufl8/6X521iDfm78a5Hvv8fHx8fHx8fHx8fHx8fH/4he93/G0f/rT2fR911Md/wA67Qep
+   eJzt2DkOgCAQheHBLW7cQnG7//18JhArp9AhsXgkf6Dhq2gYJyJFpkrUoAqNxtWojf61W6/kWvoTmjP6AS0Z/RVtxr6T+73s6Ijn3sjX3p838rX79OnTp0+fPn369OnTp0+f/l/8Tt7PeNI//WkN8n3W4xX/BKNBCOE=
   </data>
  </layer>
 </map>

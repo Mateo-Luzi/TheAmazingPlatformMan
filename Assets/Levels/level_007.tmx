@@ -190,9 +190,22 @@
    </objectgroup>
   </tile>
  </tileset>
+ <tileset firstgid="36" name="spacestation_background" tilewidth="96" tileheight="96">
+  <image source="../Tilesets/spacestation_background.png" width="192" height="384"/>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+ </tileset>
  <layer name="Tile Layer 1" width="63" height="52">
   <data encoding="base64" compression="zlib">
-   eJztm+EKwjAMhDOnMqeCsicQ3/8dbZn9JVOSZddg7+B+jXD3MQYpZZ2I7Bp0n3xM3idfGvIheXizP6QtPYXsZG9LZJ/Zh8pd0CrMZG9LZCe7hf2WfAe7N/Ts5HOXH2Ud+yTYc0DZwbVaOq9cZR078lux9vw2R3a9yI4T2X3nyK4X2XEiu+8c2fWysuf92rKX/wP7FgzWObLrRXbfLug5sutFdt8u6Dmy60V23y7oObLrRXbfLr/mLHfl5b7Zs0vL7/0s892GZxd0HvouMlJepC7ovEhd0HmRuqDzInVB50Xqgs6L1AWdF6kLOi9SF3RepC7ovPzsJLj/FcYKeUvseU+u/R/D1l46B7wA5mQWVg==
+   eJztm/0KgkAQxNesMCsoeoLou97//Vrx/NNiz3NcvBkYOJBl5ocIdxwWIrLI0KV6rV6qdxl5pa4C+1ny0kXITva8RPaWvZq4C1odM9nnr6v6Fta5sd/Vj7DOjf2pfoX1UPaD+gh2GdGzkHb//lZ/wrqWYewnwZ4Duj24VX3nlb0MY0d+K7E9f82R3S6y40T2tHNkt4vsOJE97RzZ7Yplb/bXMfvyObCPwRA7R3a7yJ62C3qO7HaRPW0X9BzZ7SJ72i7oObLbRfa0Xf7NxdyVd/fNKbvk/N630t5tpOyCzkPfRXrK89QFneepCzrPUxd0nqcu6DxPXdB5nrqg8zx1Qed56oLO89QFndc82wjuf4V6grw+9mafPPV/DGO77xzwBYfzF44=
   </data>
  </layer>
 </map>

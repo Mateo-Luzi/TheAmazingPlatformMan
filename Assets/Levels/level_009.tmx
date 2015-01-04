@@ -190,9 +190,22 @@
    </objectgroup>
   </tile>
  </tileset>
+ <tileset firstgid="36" name="spacestation_background" tilewidth="96" tileheight="96">
+  <image source="../Tilesets/spacestation_background.png" width="192" height="384"/>
+  <tile id="6">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+  <tile id="7">
+   <objectgroup draworder="index">
+    <object x="0" y="48" width="96" height="48"/>
+   </objectgroup>
+  </tile>
+ </tileset>
  <layer name="Tile Layer 1" width="58" height="52">
   <data encoding="base64" compression="zlib">
-   eJzt2skKwkAQBuFxxRU0bjd9/7e0D/Ec0rFmINTAf2wq3z2LUspy5lvFtrF17FFpmwa9Xe98lXrv1qCnk+3qZHo62a5OpqeT7epkelOcl1iX7NbuTXFmv7fFnU62q5O508l2dTJ3OtmuTuZOJ9vVydzpZLs6mTudbFcnc6eT7epk7nSyXZ3MnU6ue489K/ZaObNP5/CdTq6bfTqH73Ry3ezTOXynk+tm3z+c7zL+H+VDbB+7VtqvN/Y7P73zGDvNfOfYF/MUJxA=
+   eJztmrkKwzAUBJWTnJA7XdLkzv//X7awwZDCicxKIObBgJtlNL17IYR+4QzEWAzFPhGjDL5J1XkM6W6bwUen10unx0en10unx0en10unx9elcyU2kd7Uvi6dse/NsaPT66XTs6PT66XTs6PT66XTs6PT66XTs6PT66XTs6PT66XTs6PT66XTs6PT66XTs6PT592JQ0Jfrs7Yo7N9R6fPG3t0tu/o9Hljj87vu4hrY1dq503cG7tSOx/i2djVnafw/z/KMzEV60TUvl/e9hLv6vtcdc7FonCW4gO/WShI
   </data>
  </layer>
 </map>
