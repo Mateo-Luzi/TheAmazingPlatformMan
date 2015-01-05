@@ -6,6 +6,7 @@ public class PlatformGunMovement : MonoBehaviour {
 	private SpaceMarineController player;
 
 	private float x;
+	private Exit exit;
 	private Vector3 ls;
 	private Vector3 direction;
 	private float rotationZ;
@@ -24,7 +25,12 @@ public class PlatformGunMovement : MonoBehaviour {
 			catch{return;}
 		}
 
-		if(player.canMove){
+		if (exit == null) {
+			try{exit = GameObject.FindGameObjectWithTag ("ExitDoor").GetComponent<Exit> ();}
+			catch{return;}
+		}
+
+		if(player.canMove || !exit.finished){
 			direction = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
 			rotationZ = Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg;
 
