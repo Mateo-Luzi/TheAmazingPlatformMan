@@ -7,6 +7,7 @@ public class Exit : MonoBehaviour {
 	private SpaceMarineController player;
 	private FinishMenu finishMenu;
 	public bool finished;
+	public AudioClip exitSound;
 
 
 	// Use this for initialization
@@ -29,13 +30,14 @@ public class Exit : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D col){
 		if (col.gameObject.tag == "Player" && !finished) {
 			finished = true;
-
 			finishMenu.pauseGame();
 
 			if(PlayerPrefs.HasKey(Application.loadedLevelName))
 			   saveHighscore();
 			else
 				PlayerPrefs.SetFloat(Application.loadedLevelName, player.timeAlive);
+
+			audio.PlayOneShot(exitSound);
 		}
 	}
 

@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.2612286, y: -72.7427902, z: 0}
+  m_LocalPosition: {x: 25.8234482, y: -132.26944, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -320,7 +320,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: .769999981
-  m_Range: 19
+  m_Range: 19.5
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -365,9 +365,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294966527
-  jumpSound: {fileID: 8300000, guid: cc992d15a3d697145a78c3c78f2d992b, type: 3}
+  jumpSound: {fileID: 8300000, guid: d7da5f628ae41104484d6fad85710185, type: 3}
   switchWeaponSound: {fileID: 8300000, guid: 47a0c1388580e9f469305cae15d0de96, type: 3}
-  deathSound: {fileID: 8300000, guid: c47ab0c6cbc4e8248a3cabd5ab0c7ceb, type: 3}
+  deathSound: {fileID: 8300000, guid: 45553df09653bad4eb4e44b9f6912920, type: 3}
   pickupSound: {fileID: 8300000, guid: c8c5f774c22e1b24a83cda39860dbb03, type: 3}
   canMove: 1
   canGround: 1
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5000000, guid: 6742d6aa8be00d948851777018b017a0, type: 2}
-  projectileShotSound: {fileID: 8300000, guid: 4bb83e9dcf59fbb4bbf0568e241e15f1, type: 3}
+  projectileShotSound: {fileID: 8300000, guid: f3911684e2af9e9409822b5b22481e4a, type: 3}
   outOfAmmoSound: {fileID: 8300000, guid: 65fef411bf46c0a42bc59d479da7c707, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:

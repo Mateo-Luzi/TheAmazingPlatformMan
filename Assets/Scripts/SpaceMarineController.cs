@@ -57,7 +57,7 @@ public class SpaceMarineController : MonoBehaviour {
 		if (gameObject.rigidbody2D.velocity.y >= 0) {
 			float newYVelocity = Mathf.SmoothDamp (originalScale.y, (originalScale.y - (Mathf.Abs (gameObject.rigidbody2D.velocity.y) / 3)), ref tempVelocity, 0.075f);
 			if(newYVelocity < 0.2f)
-				newYVelocity = 0.2f;
+				newYVelocity = 0.3f;
 			transform.localScale = new Vector3 (originalScale.x, newYVelocity, originalScale.z);
 		}
 
@@ -68,8 +68,9 @@ public class SpaceMarineController : MonoBehaviour {
 
 		timeAlive = (float)Math.Round(Time.time - spawnTime, 2);
 		// hacks to get booster platform to work properly
-		if(canGround)
+		if (canGround) {
 			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+		}
 		if (grounded)
 			canMove = true;
 		if(canMove)
@@ -100,7 +101,7 @@ public class SpaceMarineController : MonoBehaviour {
 		}
 
 
-		amplitude = Mathf.PingPong(Time.time * 1.25f, 3.0f);
+		amplitude = Mathf.PingPong(Time.time * 2.0f, 3.5f);
 		gameObject.light.range = originalRange - amplitude;
 	}
 
