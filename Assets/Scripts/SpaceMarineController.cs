@@ -23,7 +23,7 @@ public class SpaceMarineController : MonoBehaviour {
 
 	public bool canMove = true;
 	public bool canGround = true;
-	private bool dying = false;
+	public bool dying = false;
 
 	public int trampolineAmmo = 0;
 	public int boosterAmmo = 0;
@@ -133,9 +133,10 @@ public class SpaceMarineController : MonoBehaviour {
 			c.isTrigger = true;	
 
 		// stop player, control death "animation"
+		canMove = false;
 		canGround = false;
 		grounded = false;
-		canMove = false;
+
 		gameObject.rigidbody2D.gravityScale = 0;
 
 		// float up

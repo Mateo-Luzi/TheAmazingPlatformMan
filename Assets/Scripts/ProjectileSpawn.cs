@@ -40,7 +40,7 @@ public class ProjectileSpawn : MonoBehaviour {
 			catch{return;}
 		}
 
-		if(!pauseMenu.pause && !exit.finished)
+		if(!pauseMenu.pause && !exit.finished && !player.dying)
 			if (Input.GetButtonDown ("Fire1")) {
 				if(player.platformMode == 1){
 					if(!cooldown){
