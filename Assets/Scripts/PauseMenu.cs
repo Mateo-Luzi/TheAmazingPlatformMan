@@ -44,7 +44,7 @@ public class PauseMenu : MonoBehaviour {
 
 	void OnGUI(){
 		if (pause == true)
-			windowRect = GUI.Window (0, windowRect, windowFunc, "Pause Menu");
+			windowRect = GUI.Window (0, windowRect, windowFunc, "Pause Menu " + getLevelName());
 	}
 
 	void windowFunc(int id){
@@ -78,5 +78,13 @@ public class PauseMenu : MonoBehaviour {
 		player.grounded = false;
 		player.canMove = false;	
 		Time.timeScale = 0;
+	}
+
+	private string getLevelName(){
+		string levelName = Application.loadedLevelName;
+		if (levelName.Equals ("alpha_demo"))
+			return "Demo";
+		else
+			return levelName.Substring (levelName.Length - 3);
 	}
 }
