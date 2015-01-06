@@ -39,7 +39,7 @@ public class trampolineSpawn : MonoBehaviour {
 					transform.localScale = new Vector3 (transform.localScale.x * 0.45f, transform.localScale.y * 0.45f, transform.localScale.z * 0.45f);
 					jumpCount--;
 			} else
-					Destroy (gameObject, 0.25f);
+					Destroy (gameObject, 0.75f);
 		}
 
 		if (col.gameObject.tag == "Ground")
