@@ -44,7 +44,7 @@ public class PauseMenu : MonoBehaviour {
 
 	void OnGUI(){
 		if (pause == true)
-			windowRect = GUI.Window (0, windowRect, windowFunc, "Pause Menu " + getLevelName());
+			windowRect = GUI.Window (0, windowRect, windowFunc, "Level " + getLevelName());
 	}
 
 	void windowFunc(int id){
