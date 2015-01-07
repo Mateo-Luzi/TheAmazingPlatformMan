@@ -14,7 +14,7 @@ public class trampolineSpawn : MonoBehaviour {
 		try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
 		catch{Start ();}
 		player.trampolineAmmo--;
-		jumpCount = 2;
+		jumpCount = 0;
 		Destroy (gameObject, 10.0f);
 	}
 	
@@ -32,7 +32,20 @@ public class trampolineSpawn : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Player") {
 			player.grounded = true;
-			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x, (0.75f * Mathf.Abs(col.gameObject.rigidbody2D.velocity.y)) + trampolineJumpVelocity);
+
+			switch(jumpCount){
+				case 2:
+					trampolineJumpVelocity = 40;
+					break;
+				case 1:
+					trampolineJumpVelocity = 60;
+					break;
+				case 0:
+					trampolineJumpVelocity = 120;
+					break;
+			}
+
+			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x, (0.75f * Mathf.Abs(col.gameObject.rigidbody2D.velocity.y)) + trampolineJumpVelocity );
 			audio.PlayOneShot (trampolineSound);
 
 			if (jumpCount > 0) {
