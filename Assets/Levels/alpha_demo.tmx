@@ -72,7 +72,7 @@
   </tile>
  </tileset>
  <tileset firstgid="16" name="spacestation_trap" tilewidth="96" tileheight="96">
-  <image source="../Tilesets/spacestation_trap.png" width="576" height="192"/>
+  <image source="../Tilesets/spacestation_trap.png" width="960" height="192"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object x="0" y="0" width="96" height="96"/>
@@ -133,8 +133,48 @@
     <object x="0" y="0" width="96" height="96"/>
    </objectgroup>
   </tile>
+  <tile id="12">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="13">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="14">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="15">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="16">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="17">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="18">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="19">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
  </tileset>
- <tileset firstgid="28" name="spacestation_background" tilewidth="96" tileheight="96">
+ <tileset firstgid="36" name="spacestation_background" tilewidth="96" tileheight="96">
   <image source="../Tilesets/spacestation_background.png" width="192" height="384"/>
   <tile id="6">
    <objectgroup draworder="index"/>
@@ -145,7 +185,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="200" height="100">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
 </map>
