@@ -72,7 +72,7 @@
   </tile>
  </tileset>
  <tileset firstgid="16" name="spacestation_trap" tilewidth="96" tileheight="96">
-  <image source="../Tilesets/spacestation_trap.png" width="576" height="192"/>
+  <image source="../Tilesets/spacestation_trap.png" width="960" height="192"/>
   <tile id="0">
    <objectgroup draworder="index">
     <object x="0" y="0" width="96" height="96"/>
@@ -133,8 +133,48 @@
     <object x="0" y="0" width="96" height="96"/>
    </objectgroup>
   </tile>
+  <tile id="12">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="13">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="14">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="15">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="16">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="17">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="18">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
+  <tile id="19">
+   <objectgroup draworder="index">
+    <object x="0" y="0" width="96" height="96"/>
+   </objectgroup>
+  </tile>
  </tileset>
- <tileset firstgid="28" name="spacestation_background" tilewidth="96" tileheight="96">
+ <tileset firstgid="36" name="spacestation_background" tilewidth="96" tileheight="96">
   <image source="../Tilesets/spacestation_background.png" width="192" height="384"/>
   <tile id="6">
    <objectgroup draworder="index"/>
@@ -145,7 +185,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="34" height="75">
   <data encoding="base64" compression="zlib">
-   eJzt2jEPwiAQhuGrVmNbHZxc1Nr2//9HrwObmJIDSsh7ybc18CQNAS40InJIlKNsr7Om1Vwj56S5BDpCvk81bkzHU/MqwPHWjAU4PpqpAMesWXZyNPJ7zfaZHf/W/S2zI8Z/xYEDBw4cOHDgwIGjNkcn9r6A1TFoHoa4vkCq+/7WcvPjwIEDB476HOt+eTckpI/uc6z7Zc4+us9hrZrOUThw4MCBAwcOHDhw4MCBYx+Hpa8d+m7GV9Z7uns38wVNsg6n
+   eJzt2jkLwzAMhmG5F02PoWPJVpKe////VR28NSFGvjCv4NuC80AQjoWdiKwSZS3La6fZaE6Rs9XsAx0hz6daN6Zj0IwVOO6aRwWOp+ZVgeOt+RRyOPnfs4fMjrm+P2d2xPiuOHDgwIEDBw4cOHC05ujEPhewOm6a3hA/F0h13l9a/v04cODAgaM9x2+/vBhyjeA4St45+pTDWi39R+HAgQMHDhw4cODAgQMHjjIOy1w79N7MVFnP6f7ezBd0mA9Q
   </data>
  </layer>
 </map>
