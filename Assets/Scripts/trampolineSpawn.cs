@@ -45,7 +45,7 @@ public class trampolineSpawn : MonoBehaviour {
 					break;
 			}
 
-			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x, (0.75f * Mathf.Abs(col.gameObject.rigidbody2D.velocity.y)) + trampolineJumpVelocity );
+			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x, (0.5f * Mathf.Abs(col.gameObject.rigidbody2D.velocity.y)) + trampolineJumpVelocity );
 			audio.PlayOneShot (trampolineSound);
 
 			if (jumpCount > 0) {
