@@ -43,6 +43,12 @@ public class SpaceMarineController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		Time.timeScale = 0;
+		canGround = false;
+		canMove = false;
+		grounded = false;
+
 		spawnTime = Time.time;
 		originalRange = gameObject.light.range;
 		originalScale = transform.localScale;
@@ -51,11 +57,11 @@ public class SpaceMarineController : MonoBehaviour {
 	
 
 	void FixedUpdate () {
-		if (canMove == true) 
+		if (canMove && !dying) 
 			rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
 
 		if (gameObject.rigidbody2D.velocity.y >= 0) {
-			float newYVelocity = Mathf.SmoothDamp (originalScale.y, (originalScale.y - (Mathf.Abs (gameObject.rigidbody2D.velocity.y) / 3)), ref tempVelocity, 0.075f);
+			float newYVelocity = Mathf.SmoothDamp (originalScale.y, (originalScale.y - (Mathf.Abs (gameObject.rigidbody2D.velocity.y) / 3)), ref tempVelocity, 0.01875f);
 			if(newYVelocity < 0.2f)
 				newYVelocity = 0.3f;
 			transform.localScale = new Vector3 (originalScale.x, newYVelocity, originalScale.z);
@@ -66,7 +72,16 @@ public class SpaceMarineController : MonoBehaviour {
 	// Update is called once per frame
 	void Update(){
 
-		timeAlive = (float)Math.Round(Time.time - spawnTime, 2);
+		// freeze game on spawn
+		if (timeAlive < 0.05f && Input.anyKey) {
+			Time.timeScale = 1;
+			canGround = true;
+			canMove = true;
+			grounded = true;
+		}
+		if(Time.timeScale > 0)
+			timeAlive = (float)Math.Round((double)(Time.time - spawnTime),3);
+
 		// hacks to get booster platform to work properly
 		if (canGround) {
 			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
@@ -77,7 +92,7 @@ public class SpaceMarineController : MonoBehaviour {
 			move = Input.GetAxisRaw("Horizontal");
 
 
-		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
+		if (canMove && !dying && grounded && Input.GetKeyDown (KeyCode.Space)) {
 			rigidbody2D.velocity = new Vector2(0,jumpVelocity);
 			audio.PlayOneShot(jumpSound);
 		}
@@ -128,9 +143,9 @@ public class SpaceMarineController : MonoBehaviour {
 		BoxCollider2D[] boxColliderList = gameObject.GetComponents<BoxCollider2D> ();
 		CircleCollider2D[] circleColliderList = gameObject.GetComponents<CircleCollider2D> ();
 		foreach (BoxCollider2D b in boxColliderList) 
-			b.isTrigger = true;		
+			b.enabled = false;	
 		foreach (CircleCollider2D c in circleColliderList) 
-			c.isTrigger = true;	
+			c.enabled = true;	
 
 		// stop player, control death "animation"
 		canMove = false;
