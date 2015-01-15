@@ -30,7 +30,7 @@ public class PlatformGunMovement : MonoBehaviour {
 			catch{return;}
 		}
 
-		if(player.canMove && !exit.finished){
+		if(Time.timeScale > 0 && !exit.finished){
 			direction = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
 			rotationZ = Mathf.Atan2 (direction.y, direction.x) * Mathf.Rad2Deg;
 

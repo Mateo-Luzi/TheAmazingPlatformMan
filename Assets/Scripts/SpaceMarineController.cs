@@ -40,6 +40,8 @@ public class SpaceMarineController : MonoBehaviour {
 	private Vector3 originalScale;
 	private float tempVelocity;
 
+	private PauseMenu pauseMenu;
+
 
 	// Use this for initialization
 	void Start () {
@@ -72,13 +74,19 @@ public class SpaceMarineController : MonoBehaviour {
 	// Update is called once per frame
 	void Update(){
 
-		// freeze game on spawn
-		if (timeAlive < 0.05f && Input.anyKey) {
-			Time.timeScale = 1;
-			canGround = true;
-			canMove = true;
-			grounded = true;
+		if (pauseMenu == null) {
+			try{pauseMenu = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<PauseMenu>();}
+			catch{return;}
 		}
+
+		// freeze game on spawn
+		if (timeAlive < 0.05f && !Input.GetKey (KeyCode.Escape) && !pauseMenu.pause &&Input.anyKey) {
+				Time.timeScale = 1;
+				canGround = true;
+				canMove = true;
+				grounded = true;
+			}
+
 		if(Time.timeScale > 0)
 			timeAlive = (float)Math.Round((double)(Time.time - spawnTime),3);
 

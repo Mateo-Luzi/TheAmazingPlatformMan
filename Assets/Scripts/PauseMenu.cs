@@ -6,7 +6,9 @@ public class PauseMenu : MonoBehaviour {
 	private SpaceMarineController player;
 	private Rect windowRect;
 	private Exit exit;
+	private float savedTimeScale;
 	public bool pause;
+
 
 	// Use this for initialization
 	void Start () {
@@ -70,13 +72,14 @@ public class PauseMenu : MonoBehaviour {
 		player.canGround = true;
 		player.grounded = true;
 		player.canMove = true;
-		Time.timeScale = 1;
+		Time.timeScale = savedTimeScale;
 	}
 
 	private void pauseGame(){
 		player.canGround = false;
 		player.grounded = false;
 		player.canMove = false;	
+		savedTimeScale = Time.timeScale;
 		Time.timeScale = 0;
 	}
 
