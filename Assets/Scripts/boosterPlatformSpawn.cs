@@ -6,7 +6,7 @@ public class boosterPlatformSpawn : MonoBehaviour {
 	private SpaceMarineController player;
 	public float trampolineJumpVelocity;
 	public AudioClip boosterSound;
-	private bool directionalBoosterEnabled = true;
+	private bool directionalBoosterEnabled = false;
 
 	// needed for directional booster
 	Vector3 pos;
