@@ -10,29 +10,12 @@ public class Exit : MonoBehaviour {
 	private FinishMenu finishMenu;
 	public bool finished;
 	public AudioClip exitSound;
-
-
-
-
-
+	
 	public string secretKey = "12345";
 	public string PostScoreUrl = "http://www.tapm.cwsurf.de/postScore.php?";
 	public string GetHighscoreUrl = "http://www.tapm.cwsurf.de/getHighscore.php";
 	
-	private string name = "Name";
-	private string score = "Score";
-	private string level = "Level";
-	private string WindowTitel = "";
-	private string Score = "";
 	
-	public GUISkin Skin;
-	public float windowWidth = 380;
-	private float windowHeight = 300;
-	public Rect windowRect;
-	
-	public int maxNameLength = 10;
-	public int getLimitScore = 15;
-
 
 	// Use this for initialization
 	void Start () {
@@ -70,11 +53,11 @@ public class Exit : MonoBehaviour {
 		string levelName;
 		string[] nameParts;
 
+		// convert scene names to remote database table names: level_003 -> level3
 		levelName = Application.loadedLevelName;
 		nameParts = levelName.Split ('_');
 		nameParts [1] = int.Parse (nameParts [1]).ToString();
 		levelName = nameParts [0] + nameParts [1];
-		Debug.Log ("Saving Highscore with levelName: "+ levelName);
 
 		if (player.timeAlive < PlayerPrefs.GetFloat (Application.loadedLevelName)) {
 			PlayerPrefs.SetFloat (Application.loadedLevelName, player.timeAlive);
@@ -83,29 +66,17 @@ public class Exit : MonoBehaviour {
 
 	}
 
-	IEnumerator GetScore(string level)
+	IEnumerator GetScore(string level, int limit)
 	{
-		Score = "";
-		
-		WindowTitel = "Loading";
-		
 		WWWForm form = new WWWForm();
-		form.AddField("limit",getLimitScore);
+		form.AddField("limit",limit);
 		form.AddField("level",level);
 		
 		WWW www = new WWW(GetHighscoreUrl,form);
 		yield return www;
 		
 		if(www.text == "") 
-		{
 			print("There was an error getting the high score: " + www.error);
-			WindowTitel = "There was an error getting the high score";
-		}
-		else 
-		{
-			WindowTitel = "Done";
-			Score = www.text;
-		}
 	}
 	
 	IEnumerator PostScore(string name, string level, float score)
@@ -113,8 +84,7 @@ public class Exit : MonoBehaviour {
 		string _name = name;
 		string _level = level;
 		float _score = score;
-		
-		
+
 		string hash = Md5Sum(_name + _level + _score + secretKey).ToLower();
 		
 		WWWForm form = new WWWForm();
@@ -123,23 +93,12 @@ public class Exit : MonoBehaviour {
 		form.AddField("score",_score.ToString());
 		form.AddField("hash",hash);
 
-
-		Debug.Log ("Sending Highscore: " + _name + " " + _level + " " + _score.ToString() + " " + hash);
-
-
 		WWW www = new WWW(PostScoreUrl,form);
-		WindowTitel = "Wait";
 		yield return www;
 		
-		if(www.text == "done") 
-		{
-
-		}
+		if (www.text == "done") {}
 		else 
-		{
 			print("There was an error posting the high score: " + www.error);
-			WindowTitel = "There was an error posting the high score";
-		}
 	}
 	
 	

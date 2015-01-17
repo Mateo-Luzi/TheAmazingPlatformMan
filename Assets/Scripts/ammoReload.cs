@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ammoReload : MonoBehaviour {
 
-	public GameObject platformPrefab;
+	public GameObject platformPrefab;	
 	public int reloadAmount;
 
 
@@ -20,6 +20,8 @@ public class ammoReload : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 
 		SpaceMarineController player = col.GetComponent<SpaceMarineController>();
+
+		// reload player ammo up until ammo limit is reached
 
 		if (col.gameObject.tag == "Player") {
 			if(platformPrefab.tag == "TrampolinePlatform"){

@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour {
 		try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
 		catch{Start ();}
 
-		// determine which platform this projectile is suppsed to spawn
+		// snapshot player platformMode to spawn the choosen platform
 		platformMode = player.platformMode;
 
 		// make the projectile rotate to the cursor
@@ -34,7 +34,7 @@ public class Projectile : MonoBehaviour {
 		ls.x = x;
 		transform.localScale = ls;
 
-		// snapshot cursor position
+		// snapshot cursor position so projectile doesn't change direction during flight
 		finalDestination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		finalDestination.z = 0;
 
@@ -48,9 +48,12 @@ public class Projectile : MonoBehaviour {
 			try{player = GameObject.FindGameObjectWithTag ("Player").GetComponent<SpaceMarineController> ();}
 			catch{return;}
 		}
-		
-		transform.position = Vector3.MoveTowards (transform.position, finalDestination,2.5f);
 
+		// move projectile towards snapshotted cursor
+		transform.position = Vector3.MoveTowards (transform.position, finalDestination, 2.5f);
+
+
+		// instantiate the appropriate platform upon reaching destination
 		if (finalDestination == transform.position) {
 			switch(platformMode){
 				case 1:
@@ -70,7 +73,7 @@ public class Projectile : MonoBehaviour {
 
 	}
 
-	// destroy projectile if it collides with anything other than the player or projectiles
+	// destroy projectile if it collides with anything other than the player, projectiles or ammo
 	void OnCollisionEnter2D(Collision2D  col){
 		if (col.gameObject.tag != "Projectile" && col.gameObject.tag != "Player" && col.gameObject.tag != "Ammo")
 			Destroy(gameObject);	

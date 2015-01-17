@@ -33,7 +33,7 @@ public class trampolineSpawn : MonoBehaviour {
 		if (col.gameObject.tag == "Player") {
 			player.grounded = true;
 
-			switch(jumpCount){
+			switch(jumpCount){ // this code still supports 3 jumps but only 1 is used
 				case 2:
 					trampolineJumpVelocity = 40;
 					break;
@@ -45,10 +45,11 @@ public class trampolineSpawn : MonoBehaviour {
 					break;
 			}
 
+			// final jump velocity = ( y-AxisInitialPlayerSpeed / 2 ) + trampolineJumpVelocity
 			col.gameObject.rigidbody2D.velocity = new Vector2(col.gameObject.rigidbody2D.velocity.x, (0.5f * Mathf.Abs(col.gameObject.rigidbody2D.velocity.y)) + trampolineJumpVelocity );
 			audio.PlayOneShot (trampolineSound);
 
-			if (jumpCount > 0) {
+			if (jumpCount > 0) { // make trampoline smaller after every jump (only works when multiple jumps are used)
 					transform.localScale = new Vector3 (transform.localScale.x * 0.45f, transform.localScale.y * 0.45f, transform.localScale.z * 0.45f);
 					jumpCount--;
 			} else

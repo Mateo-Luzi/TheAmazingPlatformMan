@@ -7,15 +7,19 @@ public class BGM : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		// prevent multiple BGM objects from existing at once
+
 		if(GameObject.FindObjectsOfType<BGM>().Length > 1)
 			Destroy (gameObject);
-		else
+		else // preserve BGM object when changing scenes
 			DontDestroyOnLoad(gameObject);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+		// latch onto camera object when it's found
 		if (camera == null)
 			camera = GameObject.Find ("Main Camera");
 		else
