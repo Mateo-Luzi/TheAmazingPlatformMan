@@ -82,7 +82,7 @@ public class FinishMenu : MonoBehaviour {
 				Time.timeScale = 1;
 				break;
 			case "level_009":
-				Application.LoadLevel("highScores");
+				Application.LoadLevel("personalHighScores");
 				Time.timeScale = 1;
 				break;
 			default:
