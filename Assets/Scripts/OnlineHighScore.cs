@@ -27,15 +27,9 @@ public class OnlineHighScore : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		list = new GUIContent[9];
-		list [0] = new GUIContent ("Level 1");
-		list [1] = new GUIContent ("Level 2");
-		list [2] = new GUIContent ("Level 3");
-		list [3] = new GUIContent ("Level 4");
-		list [4] = new GUIContent ("Level 5");
-		list [5] = new GUIContent ("Level 6");
-		list [6] = new GUIContent ("Level 7");
-		list [7] = new GUIContent ("Level 8");
-		list [8] = new GUIContent ("Level 9");
+
+		for(int i = 0; i < list.Length; i++)
+			list [i] = new GUIContent ("Level " + (i+1));
 
 		listStyle.normal.textColor = Color.white;
 		Texture2D tex = Texture2D.whiteTexture;
