@@ -6,6 +6,15 @@ public class mainMenu : MonoBehaviour {
 	public AudioClip selection;
 	public AudioClip deselection;
 
+	public UnityEngine.UI.InputField playerName;
+
+	// Use this for initialization
+	void Start () {
+		if (PlayerPrefs.HasKey ("PlayerName")) {
+			playerName.text = PlayerPrefs.GetString("PlayerName");
+		}
+	}
+
 	void Update()	{
 		Screen.showCursor = true;
 	}
@@ -18,5 +27,9 @@ public class mainMenu : MonoBehaviour {
 	public void ExitGame(){
 		audio.PlayOneShot (deselection);
 		Application.Quit();
+	}
+
+	public void setPlayerName(){
+		PlayerPrefs.SetString ("PlayerName", playerName.text);
 	}
 }
