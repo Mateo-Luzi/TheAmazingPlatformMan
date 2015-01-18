@@ -106,10 +106,12 @@ public class FinishMenu : MonoBehaviour {
 
 	private string getLevelName(){
 		string levelName = Application.loadedLevelName;
-		if(levelName.Equals("alpha_demo"))
-		   return "Demo";
-		else
-		   return levelName.Substring(levelName.Length-3);
+		if (levelName.Equals ("alpha_demo"))
+			return "Demo";
+		else {
+			//returns only the real level number
+			return int.Parse (levelName.Substring (levelName.Length - 3)).ToString ();
+		}
 	}
 	
 }

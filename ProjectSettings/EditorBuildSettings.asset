@@ -10,7 +10,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/levelSelection.unity
   - enabled: 1
-    path: Assets/highScores.unity
+    path: Assets/personalHighScores.unity
+  - enabled: 1
+    path: Assets/onlineHighScores.unity
   - enabled: 1
     path: Assets/alpha_demo.unity
   - enabled: 1

@@ -9,7 +9,6 @@ public class PauseMenu : MonoBehaviour {
 	private float savedTimeScale;
 	public bool pause;
 
-
 	// Use this for initialization
 	void Start () {
 		pause = false;
@@ -84,10 +83,17 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	private string getLevelName(){
-		string levelName = Application.loadedLevelName;
+		string levelName;
+		string[] nameParts;
+		
+		levelName = Application.loadedLevelName;
+
+
 		if (levelName.Equals ("alpha_demo"))
 			return "Demo";
-		else
-			return levelName.Substring (levelName.Length - 3);
+		else {
+			//returns only the real level number
+			return int.Parse(levelName.Substring(levelName.Length - 3)).ToString();
+		}
 	}
 }

@@ -13,9 +13,7 @@ public class Exit : MonoBehaviour {
 	
 	public string secretKey = "12345";
 	public string PostScoreUrl = "http://www.tapm.cwsurf.de/postScore.php?";
-	public string GetHighscoreUrl = "http://www.tapm.cwsurf.de/getHighscore.php";
-	
-	
+
 
 	// Use this for initialization
 	void Start () {
@@ -64,19 +62,6 @@ public class Exit : MonoBehaviour {
 			StartCoroutine(PostScore("anon", levelName, player.timeAlive));
 		}
 
-	}
-
-	IEnumerator GetScore(string level, int limit)
-	{
-		WWWForm form = new WWWForm();
-		form.AddField("limit",limit);
-		form.AddField("level",level);
-		
-		WWW www = new WWW(GetHighscoreUrl,form);
-		yield return www;
-		
-		if(www.text == "") 
-			print("There was an error getting the high score: " + www.error);
 	}
 	
 	IEnumerator PostScore(string name, string level, float score)
