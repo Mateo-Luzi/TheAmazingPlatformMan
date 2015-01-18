@@ -40,7 +40,8 @@ public class Projectile : MonoBehaviour {
 
 		Destroy (gameObject, 2.0f);
 	}
-	
+
+
 	// Update is called once per frame
 	void Update () {
 
@@ -50,7 +51,7 @@ public class Projectile : MonoBehaviour {
 		}
 
 		// move projectile towards snapshotted cursor
-		transform.position = Vector3.MoveTowards (transform.position, finalDestination, 2.5f);
+		transform.position = Vector3.MoveTowards (transform.position, finalDestination, Time.deltaTime*200);
 
 
 		// instantiate the appropriate platform upon reaching destination
@@ -74,10 +75,6 @@ public class Projectile : MonoBehaviour {
 	}
 
 	// destroy projectile if it collides with anything other than the player, projectiles or ammo
-	void OnCollisionEnter2D(Collision2D  col){
-		if (col.gameObject.tag != "Projectile" && col.gameObject.tag != "Player" && col.gameObject.tag != "Ammo")
-			Destroy(gameObject);	
-	}
 	void OnTriggerEnter2D(Collider2D  col){
 		if (col.gameObject.tag != "Projectile" && col.gameObject.tag != "Player" && col.gameObject.tag != "Ammo")
 			Destroy(gameObject);	

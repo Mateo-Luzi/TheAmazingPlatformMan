@@ -7,6 +7,7 @@ public class BGM : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Application.targetFrameRate = 150;
 
 		// prevent multiple BGM objects from existing at once
 
