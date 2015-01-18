@@ -59,7 +59,7 @@ public class Exit : MonoBehaviour {
 
 		if (player.timeAlive < PlayerPrefs.GetFloat (Application.loadedLevelName)) {
 			PlayerPrefs.SetFloat (Application.loadedLevelName, player.timeAlive);
-			StartCoroutine(PostScore("anon", levelName, player.timeAlive));
+			StartCoroutine(PostScore(PlayerPrefs.GetString("PlayerName"), levelName, player.timeAlive));
 		}
 
 	}
