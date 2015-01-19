@@ -37,10 +37,7 @@ public class Exit : MonoBehaviour {
 			finished = true;
 			finishMenu.pauseGame();
 
-			if(PlayerPrefs.HasKey(Application.loadedLevelName))
-			   saveHighscore();
-			else
-				PlayerPrefs.SetFloat(Application.loadedLevelName, player.timeAlive);
+			saveHighscore();
 
 			audio.PlayOneShot(exitSound);
 		}
@@ -57,7 +54,9 @@ public class Exit : MonoBehaviour {
 		nameParts [1] = int.Parse (nameParts [1]).ToString();
 		levelName = nameParts [0] + nameParts [1];
 
-		if (player.timeAlive < PlayerPrefs.GetFloat (Application.loadedLevelName)) {
+		Debug.Log (PlayerPrefs.HasKey (Application.loadedLevelName));
+
+		if ((player.timeAlive < PlayerPrefs.GetFloat (Application.loadedLevelName)) || (PlayerPrefs.HasKey (Application.loadedLevelName) == false)) {
 			PlayerPrefs.SetFloat (Application.loadedLevelName, player.timeAlive);
 			StartCoroutine(PostScore(PlayerPrefs.GetString("PlayerName"), levelName, player.timeAlive));
 		}
@@ -81,7 +80,9 @@ public class Exit : MonoBehaviour {
 		WWW www = new WWW(PostScoreUrl,form);
 		yield return www;
 		
-		if (www.text == "done") {}
+		if (www.text == "done") {
+			Debug.Log ("Highscore posted successfully");
+		}
 		else 
 			print("There was an error posting the high score: " + www.error);
 	}
