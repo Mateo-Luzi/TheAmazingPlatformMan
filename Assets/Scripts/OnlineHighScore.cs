@@ -10,6 +10,7 @@ public class OnlineHighScore : MonoBehaviour {
 	public GUIStyle labelStyle;
 	public GUIStyle buttonStyle;
 	public GUIStyle boxStyle;
+	public GUIStyle windowStyle;
 	private bool picked = true;
 
 	public int popupListHash = "PopupList".GetHashCode();
@@ -42,28 +43,28 @@ public class OnlineHighScore : MonoBehaviour {
 
 
 		windowRect = new Rect (300, 200, windowWidth, windowHeight);
-		StartCoroutine (GetScore ("level1",10));
+		StartCoroutine (GetScore ("level1",15));
 	}
 
 	void OnGUI(){
-		if (List (new Rect (50, 120, 175, 60), ref showList, ref listEntry, 
+		if (List (new Rect (Screen.width / 8 - 50, 120, 175, 60), ref showList, ref listEntry, 
 		               new GUIContent ("Click!"), list, buttonStyle, boxStyle, listStyle)) {
 						picked = true;
 				}
 		if (picked) {
-			GUI.Label(new Rect(475,120,250,20), list[listEntry].text, labelStyle);
+			GUI.Label(new Rect(Screen.width / 2 - 100,120,250,20), list[listEntry].text, labelStyle);
 
 		}
 
-		windowRect = GUI.Window(0, windowRect, DoMyWindow, windowTitel);
+		windowRect = GUI.Window(0, windowRect, DoMyWindow, windowTitel, windowStyle);
 
 	}
 
 
 	// Update is called once per frame
 	void Update () {
-		windowRect = new Rect (Screen.width / 2 - (windowWidth / 2), 200, windowWidth, Screen.height - 320);
-		windowHeight = Screen.height - 50;
+		windowRect = new Rect (Screen.width / 2 - 200, 175, windowWidth, Screen.height - 320);
+		windowHeight = Screen.height - 100;
 	}
 
 	public IEnumerator GetScore(string level, int limit)
@@ -88,7 +89,7 @@ public class OnlineHighScore : MonoBehaviour {
 
 	void DoMyWindow(int windowID) 
 	{
-		GUI.Label (new Rect (windowWidth / 2 - windowWidth / 2, 30, windowWidth, windowHeight), score);      
+		GUI.Label (new Rect (windowWidth / 2 - windowWidth / 2, 30, windowWidth, windowHeight), score, windowStyle);      
 	}
 
 	public void BackToMainMenu(){
@@ -129,9 +130,8 @@ public class OnlineHighScore : MonoBehaviour {
 		if (done) {
 			showList = false;
 			levelName = listContent[listEntry].text;
-			Debug.Log("almost done");
 			//convert levelName to string that matches database table name
-			StartCoroutine (GetScore(levelName.ToLower().Replace(" ", ""), 10));
+			StartCoroutine (GetScore(levelName.ToLower().Replace(" ", ""), 15));
 		}
 		return done;
 	}
