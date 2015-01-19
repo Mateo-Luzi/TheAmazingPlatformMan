@@ -10,6 +10,7 @@ public class levelSelect : MonoBehaviour {
 	}
 
 	public void ChangeToScene(string sceneToChangeTo){
+		BGM.playSound (selection);
 		Application.LoadLevel(sceneToChangeTo);
 	}
 

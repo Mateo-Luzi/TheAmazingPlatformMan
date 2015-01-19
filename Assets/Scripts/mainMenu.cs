@@ -23,19 +23,7 @@ public class mainMenu : MonoBehaviour {
 	public void ChangeToScene(string SceneToChangeTo)
 	{
 		BGM.playSound (selection);
-		switch (SceneToChangeTo) {
-		case "levelSelection": 
-			Application.LoadLevel("levelSelection");
-			break;
-		case "personalHighScores": 
-			Application.LoadLevel("personalHighScores");
-			break;
-		case "onlineHighScores": 
-			Application.LoadLevel("onlineHighScores");
-			break;
-		default:
-			break;
-		}
+		Application.LoadLevel(SceneToChangeTo);
 	}
 
 	public void ExitGame(){

@@ -37,11 +37,13 @@ public class OnlineHighScore : MonoBehaviour {
 		listStyle.normal.textColor = Color.white;
 		Texture2D tex = Texture2D.whiteTexture;
 
+		//drop down menu style
 		tex.Apply();
 		listStyle.hover.background = tex;
 		listStyle.onHover.background = tex;
 		listStyle.padding.left = listStyle.padding.right = 4;
 		listStyle.padding.top = listStyle.padding.bottom = 4;
+
 
 
 		windowRect = new Rect (300, 200, windowWidth, windowHeight);
