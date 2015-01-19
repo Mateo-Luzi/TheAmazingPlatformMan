@@ -126,46 +126,6 @@ PolygonCollider2D:
       - {x: 3840, y: -2592}
       - {x: 3840, y: -2688}
       - {x: 960, y: -2688}
---- !u!1 &159689560
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 159689562}
-  - 114: {fileID: 159689561}
-  m_Layer: 0
-  m_Name: Crosshair
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &159689561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 159689560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f29ae0ac830584f866049c2044f475, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: b4b1bd196573cdc4489c0a574c4a35e4, type: 3}
---- !u!4 &159689562
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 159689560}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.07920361, y: -3.36368275, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
 --- !u!1 &188316307
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +178,7 @@ Transform:
   m_LocalScale: {x: 87.3499985, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1001 &211304204
 Prefab:
   m_ObjectHideFlags: 0
@@ -1392,7 +1352,7 @@ Transform:
   m_Children:
   - {fileID: 1303132369}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &358686280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,7 +1546,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &491114360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,7 +1825,7 @@ RectTransform:
   m_Children:
   - {fileID: 615548191}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1882,6 +1842,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -2279,6 +2240,7 @@ GameObject:
   - 4: {fileID: 1297033813}
   - 61: {fileID: 1297033815}
   - 114: {fileID: 1297033814}
+  - 82: {fileID: 1297033816}
   m_Layer: 0
   m_Name: Exit
   m_TagString: ExitDoor
@@ -2311,6 +2273,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finished: 0
+  exitSound: {fileID: 8300000, guid: d02ad947da24b6147aee99fac94f8b07, type: 3}
+  secretKey: 12345
+  PostScoreUrl: http://www.tapm.cwsurf.de/postScore.php?
 --- !u!61 &1297033815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2323,6 +2288,65 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 4.81576872, y: 7.22284698}
   m_Center: {x: .154693604, y: -.0117530804}
+--- !u!82 &1297033816
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: 404bc8007d8beb24197fe96f5a094599,
+    type: 2}
+  m_PrefabInternal: {fileID: 407708036}
+  m_GameObject: {fileID: 1297033812}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 100
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1303132364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2899,7 +2923,7 @@ Transform:
   m_Children:
   - {fileID: 1946169877}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &1931002906
 MonoBehaviour:
   m_ObjectHideFlags: 0

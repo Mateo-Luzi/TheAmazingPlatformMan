@@ -1,7 +1,7 @@
 #pragma strict
 var cursor : Texture2D;
 function Start () {
-
+	Screen.showCursor = false;
 }
 
 function OnGUI(){

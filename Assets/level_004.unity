@@ -122,46 +122,6 @@ Prefab:
   m_RootGameObject: {fileID: 1969691407}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &159689560
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 159689562}
-  - 114: {fileID: 159689561}
-  m_Layer: 0
-  m_Name: Crosshair
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &159689561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 159689560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f29ae0ac830584f866049c2044f475, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: b4b1bd196573cdc4489c0a574c4a35e4, type: 3}
---- !u!4 &159689562
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 159689560}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.07920361, y: -3.36368275, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
 --- !u!1001 &211304204
 Prefab:
   m_ObjectHideFlags: 0
@@ -1335,7 +1295,7 @@ Transform:
   m_Children:
   - {fileID: 1303132369}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1001 &319562895
 Prefab:
   m_ObjectHideFlags: 0
@@ -1412,7 +1372,7 @@ Transform:
   m_Children:
   - {fileID: 858270587}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &325421589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1664,7 +1624,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &524199087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1657,7 @@ Transform:
   m_Children:
   - {fileID: 326076191}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!102 &524199089
 TextMesh:
   serializedVersion: 3
@@ -2173,7 +2133,7 @@ RectTransform:
   m_Children:
   - {fileID: 615548191}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -2425,7 +2385,7 @@ Transform:
   m_Children:
   - {fileID: 1363701709}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &915442264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,6 +3037,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finished: 0
   exitSound: {fileID: 8300000, guid: d02ad947da24b6147aee99fac94f8b07, type: 3}
+  secretKey: 12345
+  PostScoreUrl: http://www.tapm.cwsurf.de/postScore.php?
 --- !u!61 &1297033815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3728,7 +3690,7 @@ Transform:
   m_Children:
   - {fileID: 1047543921}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &1722623591
 GameObject:
   m_ObjectHideFlags: 0
@@ -4103,7 +4065,7 @@ Transform:
   m_LocalScale: {x: 1, y: 75.0599976, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1001 &2027269406
 Prefab:
   m_ObjectHideFlags: 0
