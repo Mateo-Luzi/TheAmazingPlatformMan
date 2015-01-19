@@ -93,17 +93,11 @@ public class OnlineHighScore : MonoBehaviour {
 	}
 
 	public void BackToMainMenu(){
-		audio.PlayOneShot (selection);
-		//delay method call for changing scene so audio clip finishes playing
-		Invoke ("ChangeToMainMenu", 0.2f);
-	}
-	
-	public void ChangeToMainMenu(){
+		BGM.playSound (selection);
 		Application.LoadLevel("mainMenu");
 	}
 
 
-	
 	private bool List (Rect position, ref bool showList, ref int listEntry, GUIContent buttonContent, GUIContent[] listContent,
 	                         GUIStyle listStyle) {
 		return List(position, ref showList, ref listEntry, buttonContent, listContent, "button", "box", listStyle);

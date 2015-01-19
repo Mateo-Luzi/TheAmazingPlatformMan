@@ -22,41 +22,24 @@ public class mainMenu : MonoBehaviour {
 
 	public void ChangeToScene(string SceneToChangeTo)
 	{
-		audio.PlayOneShot (selection);
+		BGM.playSound (selection);
 		switch (SceneToChangeTo) {
 		case "levelSelection": 
-			Invoke ("ChangeToLevelSelection", 0.2f);
+			Application.LoadLevel("levelSelection");
 			break;
 		case "personalHighScores": 
-			Invoke ("ChangeToPersonalHighScores", 0.2f);
+			Application.LoadLevel("personalHighScores");
 			break;
 		case "onlineHighScores": 
-			Invoke ("ChangeToOnlineHighScores", 0.2f);
+			Application.LoadLevel("onlineHighScores");
 			break;
 		default:
 			break;
 		}
 	}
 
-	//helper method to play sound
-	public void ChangeToLevelSelection(){
-		Application.LoadLevel("levelSelection");
-	}
-
-	//helper method to play sound
-	public void ChangeToPersonalHighScores(){
-		Application.LoadLevel("personalHighScores");
-	}
-
-	//helper method to play sound
-	public void ChangeToOnlineHighScores(){
-		Application.LoadLevel("onlineHighScores");
-	}
-
-
-
 	public void ExitGame(){
-		audio.PlayOneShot (deselection);
+		BGM.playSound(deselection);
 		Invoke ("Quit", 0.2f);
 	}
 
@@ -66,7 +49,7 @@ public class mainMenu : MonoBehaviour {
 	}
 
 	public void setPlayerName(){
-		audio.PlayOneShot (selectName);
+		BGM.playSound(selectName);
 		PlayerPrefs.SetString ("PlayerName", playerName.text);
 	}
 }

@@ -27,4 +27,11 @@ public class BGM : MonoBehaviour {
 			gameObject.transform.position = camera.transform.position;
 	}
 
+	// use this to play sounds that could be interrupted by scene changes
+	public static void playSound(AudioClip c){
+		BGM[] thisBGM = GameObject.FindObjectsOfType<BGM> ();
+		thisBGM[0].GetComponent<AudioSource>().PlayOneShot (c);
+	}
+
+
 }

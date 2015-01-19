@@ -14,12 +14,7 @@ public class levelSelect : MonoBehaviour {
 	}
 
 	public void BackToMainMenu(){
-		audio.PlayOneShot (selection);
-		//delay method call for changing scene so audio clip finishes playing
-		Invoke ("ChangeToMainMenu", 0.2f);
-	}
-	
-	public void ChangeToMainMenu(){
+		BGM.playSound (selection);
 		Application.LoadLevel("mainMenu");
 	}
 }

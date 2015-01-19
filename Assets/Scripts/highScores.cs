@@ -72,21 +72,16 @@ public class highScores : MonoBehaviour {
 	}
 
 	public void resetHighscore(string levelName){
-		audio.PlayOneShot (reset);
+		BGM.playSound (reset);
 		PlayerPrefs.DeleteKey (levelName);
 		Start ();
 	}
 
 	public void BackToMainMenu(){
-		audio.PlayOneShot (selection);
-		//delay method call for changing scene so audio clip finishes playing
-		Invoke ("ChangeToMainMenu", 0.2f);
-	}
-
-	public void ChangeToMainMenu(){
+		BGM.playSound (selection);
 		Application.LoadLevel("mainMenu");
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	
