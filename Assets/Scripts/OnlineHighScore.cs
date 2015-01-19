@@ -3,6 +3,8 @@ using System.Collections;
 
 public class OnlineHighScore : MonoBehaviour {
 
+	public AudioClip selection;
+
 	private bool showList = false;
 	private int listEntry = 0;
 	private GUIContent[] list;
@@ -73,8 +75,6 @@ public class OnlineHighScore : MonoBehaviour {
 		form.AddField("limit",limit);
 		form.AddField("level",level);
 
-		Debug.Log (level);
-		
 		WWW www = new WWW(GetHighscoreUrl,form);
 		yield return www;
 		
@@ -93,6 +93,12 @@ public class OnlineHighScore : MonoBehaviour {
 	}
 
 	public void BackToMainMenu(){
+		audio.PlayOneShot (selection);
+		//delay method call for changing scene so audio clip finishes playing
+		Invoke ("ChangeToMainMenu", 0.2f);
+	}
+	
+	public void ChangeToMainMenu(){
 		Application.LoadLevel("mainMenu");
 	}
 

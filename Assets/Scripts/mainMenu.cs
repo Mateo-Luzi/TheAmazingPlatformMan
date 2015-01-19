@@ -20,13 +20,48 @@ public class mainMenu : MonoBehaviour {
 		Screen.showCursor = true;
 	}
 
-	public void ChangeToScene(string sceneToChangeTo){
+	public void ChangeToScene(string SceneToChangeTo)
+	{
 		audio.PlayOneShot (selection);
-		Application.LoadLevel(sceneToChangeTo);
+		switch (SceneToChangeTo) {
+		case "levelSelection": 
+			Invoke ("ChangeToLevelSelection", 0.2f);
+			break;
+		case "personalHighScores": 
+			Invoke ("ChangeToPersonalHighScores", 0.2f);
+			break;
+		case "onlineHighScores": 
+			Invoke ("ChangeToOnlineHighScores", 0.2f);
+			break;
+		default:
+			break;
+		}
 	}
+
+	//helper method to play sound
+	public void ChangeToLevelSelection(){
+		Application.LoadLevel("levelSelection");
+	}
+
+	//helper method to play sound
+	public void ChangeToPersonalHighScores(){
+		Application.LoadLevel("personalHighScores");
+	}
+
+	//helper method to play sound
+	public void ChangeToOnlineHighScores(){
+		Application.LoadLevel("onlineHighScores");
+	}
+
+
 
 	public void ExitGame(){
 		audio.PlayOneShot (deselection);
+		Invoke ("Quit", 0.2f);
+	}
+
+	//helper method to play sound
+	public void Quit(){
 		Application.Quit();
 	}
 

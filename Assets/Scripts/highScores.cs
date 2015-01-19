@@ -4,6 +4,9 @@ using System.Collections;
 
 public class highScores : MonoBehaviour {
 
+	public AudioClip selection;
+	public AudioClip reset;
+
 	public Text demoHighScore;
 	public Text level1HighScore;
 	public Text level2HighScore;
@@ -66,6 +69,22 @@ public class highScores : MonoBehaviour {
 			this.level9HighScore.text = PlayerPrefs.GetFloat("level_009").ToString();
 		else
 			this.level9HighScore.text = "-";
+	}
+
+	public void resetHighscore(string levelName){
+		audio.PlayOneShot (reset);
+		PlayerPrefs.DeleteKey (levelName);
+		Start ();
+	}
+
+	public void BackToMainMenu(){
+		audio.PlayOneShot (selection);
+		//delay method call for changing scene so audio clip finishes playing
+		Invoke ("ChangeToMainMenu", 0.2f);
+	}
+
+	public void ChangeToMainMenu(){
+		Application.LoadLevel("mainMenu");
 	}
 	
 	// Update is called once per frame
