@@ -1164,6 +1164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selection: {fileID: 8300000, guid: 7f9b5c9699146214c882d6b7ba8145e0, type: 3}
   deselection: {fileID: 8300000, guid: 3d56727f0a86a8a49bad5c99f45c86e1, type: 3}
+  selectName: {fileID: 8300000, guid: 9f3c65e96fd35d540bd77f2d0ffb366a, type: 3}
   playerName: {fileID: 1202937567}
 --- !u!4 &1357334305
 Transform:

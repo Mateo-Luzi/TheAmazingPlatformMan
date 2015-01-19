@@ -5,6 +5,7 @@ public class mainMenu : MonoBehaviour {
 
 	public AudioClip selection;
 	public AudioClip deselection;
+	public AudioClip selectName;
 
 	public UnityEngine.UI.InputField playerName;
 
@@ -30,6 +31,7 @@ public class mainMenu : MonoBehaviour {
 	}
 
 	public void setPlayerName(){
+		audio.PlayOneShot (selectName);
 		PlayerPrefs.SetString ("PlayerName", playerName.text);
 	}
 }
