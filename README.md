@@ -16,4 +16,4 @@ To have your personal highscores submitted online you must use this pre-built ve
 * switch platform ammunition: 1, 2, 3
 * pause: escape
 
-The controls arent configurable by the user at the moment. Sorry about that.
+The controls arent configurable by the user at the moment. Sorry about that..
